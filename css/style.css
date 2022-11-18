@@ -58,7 +58,7 @@ a{
     display: flex;
     border-radius: 3%;
     border: 1px solid #FFFFFF;
-    background-color: rgb(128,0,0, 0.7);
+    background-color: rgb(128,0,0, 0.9);
 }
 
     .popup .left, .right {
@@ -124,7 +124,7 @@ a{
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 1.3vw;
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;

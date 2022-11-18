@@ -1,10 +1,244 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title></title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/reg.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Endeavour | register </title>
 </head>
 <body>
-    <h1 style="font-size : 50px; text-align : center; margin : 20% auto; ">COMING SOON</h1>
+    <nav class="topNav">
+        <div class="emptySpace25">
+            <div class="endeavourLogo"><a href="./index.html#home"><img src="./images/mainlogo.png" alt="Endeavour-Logo" srcset=""></a></div>
+        </div>
+        <ul class="navArray">
+            <li class="navComponent flex-center"><a href="./index.html#home" class="flex-center activeTopNav">HOME</a></li>
+            <li class="navComponent flex-center"><a href="./about.html#aboutTeam" class="flex-center">ABOUT US</a></li>
+            <li class="navComponent flex-center"><a href="projects.html#UAVs" class="flex-center">DOMAINS</a></li>
+            <li class="navComponent flex-center"><a href="./index.html#sponsors" class="flex-center">SPONSORS</a></li>
+            <li class="navComponent flex-center"><a href="#alumni" class="flex-center ">TEAM</a></li>
+        </ul>
+        <div class="emptySpace25">
+            <div class="endeavourLogo"><a href="http://sliet.ac.in/" target="_blank" rel="noopener noreferrer"><img src="./images/SLIET_in_Colours_of_ENDEAVOUR.png" alt="Endeavour-Logo" srcset=""></a></div>
+        </div>
+    </nav>
+    <!-- TOP NAVIGATION -->
+    <div class="container">
+
+        <div class="content">
+            <p class="content-dealing">
+                Endeavour is the official robotics team of SLIET, Punjab, founded in 2014.
+                Connecting like-minded yet unique intellectuals from all branches of engineering and aligning their skills and interests was the main objective behind the starting of Endeavour.<br>
+                From then, our team is continuously working on various projects and participating in hackathons and techfests at national level.
+                Looking for the opportunity for hands-on robots design?
+                You've the entered the right place! To all the passionate and enthusiastic learners,<br> Endeavour have got it all for you. Come, and begin with us. We'll together make it to success.<BR>
+
+
+            </p>
+        </div>
+        <div class="main">
+
+            <p class="pageTitle title">Registration form</p>
+            <p class="secondaryTitle title">Come and witness opportunities awaiting each day</p>
+
+            <input type="text" class="formEntry" id="name" placeholder="Name" />
+            <input type="text" class="formEntry" id="email" placeholder="Email" />
+            <input type="text" class="formEntry" id="contact" placeholder="Contact No" />
+            <input type="text" class="formEntry" id="regno" placeholder="Reg No" />
+
+            <input type="text" class="formEntry" id="ten" placeholder="10th score" />
+            <input type="text" class="formEntry" id="twelve" placeholder="12th score" />
+            <textarea class="formEntry" id="why" placeholder="Why should we select you"></textarea>
+
+            <p id="prog">
+                <span>Programme</span><br /><br />
+                <input type="radio" id="btech" class="radio" name="prog" value="btech">B.E
+                <input type="radio" id="icd" class="radio" name="prog" value="icd">ICD
+            </p>
+
+            <p id="YEAR">
+                <span>Year</span><br /><br />
+                <input type="radio" id=ft class="radio" name="YEAR" value="btech">First
+                <input type="radio" id=sd class="radio" name="YEAR" value="icd">Second
+                <input type="radio" id=tr class="radio" name="YEAR" value="btech">Third
+            </p>
+
+            <p>
+                <span>Branch</span>
+                <select id="select1">
+                    <option value="free">Free</option>
+                    <option value="basic">Basic</option>
+                    <option value="premium">Premium</option>
+                </select>
+            </p>
+
+            <p>
+                <span>Upload your resume</span><br /><br />
+                <input type="File" class="file1">
+            </p>
+            <button class="submit" id="submitbtn">Submit</button>
+
+
+        </div>
+    </div>
+    <div class="pop" id="pop">
+        <h3 id="msg">message</h3>
+        <button id="bty" onclick="clos()"> okay </button>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js'
+        import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-database.js"
+        const firebaseConfig = {
+            apiKey: "AIzaSyCrdJVxZBixNQJQ4kR7g_Y7qCdGgpumwlg",
+            authDomain: "fir-frontend2-3f205.firebaseapp.com",
+            databaseURL: "https://fir-frontend2-3f205-default-rtdb.firebaseio.com",
+            projectId: "fir-frontend2-3f205",
+            storageBucket: "fir-frontend2-3f205.appspot.com",
+            messagingSenderId: "263850037373",
+            appId: "1:263850037373:web:84bf82a0e99ff54162a114"
+        };
+        const firebaseConfig1 = {
+            apiKey: "AIzaSyBDORNRQMxzUTMZcldSE2VR8BKoTa1PI74",
+            authDomain: "code-with-zio.firebaseapp.com",
+            databaseURL: "https://code-with-zio.firebaseio.com",
+            projectId: "code-with-zio",
+            storageBucket: "code-with-zio.appspot.com",
+            messagingSenderId: "245478950948",
+            appId: "1:245478950948:web:f1390864386c276f6630b1",
+            measurementId: "G-75TD9Y3HXC"
+        };
+        //INTIALISE DATABASE
+        initializeApp(firebaseConfig1);//initilise fire base kerne ke liye
+        const root = getDatabase();
+
+        function clos() {
+            document.getElementById("pop").style.display = "none";
+        }
+        clos()
+        function disp(x) {
+            document.getElementById("pop").style.display = "block";
+            document.getElementById("msg").innerHTML = x;
+        }
+
+
+        function writeUserData(_name, mail, _contact, _reg, _prog, _year, _trade, _ten, _twelve, _why) {
+            set(ref(root, 'users/' + _reg), {
+                name: _name,
+                email: mail,
+                contactno: _contact,
+                reg: _reg,
+                prog: _prog,
+                year: _year,
+                trade: _trade,
+                ten: _ten,
+                twelve: _twelve,
+                why: _why
+            });
+            disp("thank you for registering \n we will contact you back soon")
+        }
+        submitbtn.addEventListener('click', (e) => {
+            var username = document.getElementById('name').value;
+            var mail = document.getElementById('email').value;
+            var _contact = document.getElementById('contact').value;
+            var _reg = document.getElementById('regno').value;
+            var _ten = document.getElementById('ten').value;
+            var _twelve = document.getElementById('twelve').value;
+            var _why = document.getElementById('why').value;
+
+            let prog = document.getElementsByName('prog')
+            var _prog = ""
+            if (prog[0].checked)
+                var _prog = "B.E"
+            else if (prog[1].checked)
+                var _prog = "ICD"
+
+            let year = document.getElementsByName('YEAR')
+            var _year = ""
+
+            if (year[1].checked)
+                _year = "second"
+            else if (year[2].checked)
+                _year = "third"
+            else if (year[0].checked)
+                _year = "first"
+
+            var _trade = document.querySelector('#select1').value;
+
+            if (username && mail && _contact && _reg && _prog && _year && _trade && _ten && _twelve && _why)
+                writeUserData(username, mail, _contact, _reg, _prog, _year, _trade, _ten, _twelve, _why)
+            else
+                disp("please fill out all the fields")
+        });
+    </script>
+    <!-- ********** FOOTER ********** -->
+    <section class="footer">
+        <div class="connectionFooter flex-center">
+            <div class="connectionFooterOne flex-center">
+                <div class="endeavourLogoFooter flex-column-center"><img src="./images/logoSlietWhite.png" alt="Endeavour-Logo" srcset=""><img src="./images/footerLogo.png" alt="Endeavour-Logo" srcset=""></div>
+            </div>
+            <div class="connectionFooterTwo">
+                <!-- 1 -->
+                <div class="footerMainText">
+                    <!-- 1.1 -->
+                    E N D E A V O U R
+                </div>
+                <div class="footerTagText">
+                    <!-- 1.2 -->
+                    Strive to Create Difference
+                </div>
+                <div class="footerSocialIcons">
+                    <!-- 1.3 -->
+                    <a href="https://www.facebook.com/endeavoursliet"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/endeavoursliet/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/endeavoursliet/"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:endeavourinsliet@gmail.com"><i class="far fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="menuFooter">
+            <!-- 2 -->
+            <table class="menuFooterContainer">
+                <tr>
+                    <th>Our Team</th>
+                    <th>Our Works</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td><a href="./about.html#aboutTeam">About Us</a></td>
+                    <td><a href="./projects.html#UAVs">UAVs</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><a href="./about.html#ourHistory">Our History</a></td>
+                    <td><a href="./projects01.html#UGVs">UGVs</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><a href="./teams.html#ourTeam">Meet The Team</a></td>
+                    <td><a href="./research.html#research">Research Projects</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <div class="contactContainer">
+                <p><i class="fas fa-id-badge"></i> &nbsp Krishna Kumar &#58 <a href="tel:+917654323762">+91 7654323762</a></p>
+                <br />
+                <p><i class="fas fa-id-badge"></i> &nbsp Soham Das &#58 <a href="tel:+919740734156">+91 9740734156</a></p>
+            </div>
+        </div>
+    </section>
+    <!-- ********** FOOTER ********** -->
 </body>
 </html>
