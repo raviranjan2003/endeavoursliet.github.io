@@ -14,45 +14,78 @@
     <link rel="icon" type="image/png" href="./images/10Artboard 1_1white Endeavour.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
+
+    
 </head>
 <body>
-<!-- TOP NAVIGATION -->
-<nav class="topNav">
-    <div class="emptySpace25">
-        <div class="endeavourLogo"><a href="#"><img src="./images/mainlogo.png" alt="Endeavour-Logo" srcset=""></a></div>
-    </div>
-    <ul class="navArray">
-        <li class="navComponent flex-center"><a href="#" class="flex-center activeTopNav">HOME</a></li>
-        <li class="navComponent flex-center"><a href="./about.html#aboutTeam" class="flex-center">ABOUT US</a></li>
-        <li class="navComponent flex-center"><a href="#domains" class="flex-center">DOMAINS</a></li>
-        <li class="navComponent flex-center"><a href="#sponsors" class="flex-center">SPONSORS</a></li>
-        <li class="navComponent flex-center"><a href="./teams.html#alumni" class="flex-center">TEAM</a></li>
-        
-    </ul>
-    <div class="emptySpace25">
-        <div class="endeavourLogo"><a href="http://sliet.ac.in/" target="_blank" rel="noopener noreferrer"><img src="./images/SLIET_in_Colours_of_ENDEAVOUR.png" alt="Endeavour-Logo" srcset=""></a></div>
-    </div>
-</nav>
-<!-- TOP NAVIGATION -->
+    <!-- pop up for registration -->
 
-<!-- INTRODUCTION -->
+    <div id="overlay" class="overlay">
+        <div class="popcontainer">
+            <div class="popup">
+                <div class="left">
+                    
+                        <div class="endeavourLogo"><a href="#"><img src="./images/footerLogo.png" alt="Endeavour-Logo" srcset=""></a></div>
+                    
+                </div>
+                <div class="right">
+                    <button id="close" onclick="closeit()"> close </button>
+                    <h2>We are recruiting !</h2>
+                    <h4>Register now to get hired as well as for a free robotics workshop</h4>
+                    <button id="reg" onclick="register()"> Register me </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.getElementById("overlay").style.display = "block";
+        function closeit() {
+            document.getElementById("overlay").style.display = "none";
+        }
+        function register() {
+            window.location.href = "./register.html";
+        }
+    </script>
+
+    <!-- TOP NAVIGATION -->
+    <nav class="topNav">
+        <div class="emptySpace25">
+            <div class="endeavourLogo"><a href="#"><img src="./images/mainlogo.png" alt="Endeavour-Logo" srcset=""></a></div>
+        </div>
+        <ul class="navArray">
+            <li class="navComponent flex-center"><a href="#" class="flex-center activeTopNav">HOME</a></li>
+            <li class="navComponent flex-center"><a href="./about.html#aboutTeam" class="flex-center">ABOUT US</a></li>
+            <li class="navComponent flex-center"><a href="#domains" class="flex-center">DOMAINS</a></li>
+            <li class="navComponent flex-center"><a href="#sponsors" class="flex-center">SPONSORS</a></li>
+            <li class="navComponent flex-center"><a href="./teams.html#alumni" class="flex-center">TEAM</a></li>
+
+        </ul>
+        <div class="emptySpace25">
+            <div class="endeavourLogo"><a href="http://sliet.ac.in/" target="_blank" rel="noopener noreferrer"><img src="./images/SLIET_in_Colours_of_ENDEAVOUR.png" alt="Endeavour-Logo" srcset=""></a></div>
+        </div>
+    </nav>
+    <!-- TOP NAVIGATION -->
+    <!-- INTRODUCTION -->
     <section class="intro">
         <p class="endeavourText">ENDEAVOUR</p>
         <p class="endeavourTagline">STRIVE TO CREATE DIFFERENCE</p>
     </section>
-<!-- INTRODUCTION -->
-
-<!-- BLOG -->
+    <!-- INTRODUCTION -->
+    <!-- BLOG -->
     <section class="blogReference" id="home">
         <div class="blogReferenceContainer">
             <div class="blogContainerText">
-                <p>We write some awesome technical Blogs !
-                <br />Increase your tech quotient along with us</p>
+                <p>
+                    We write some awesome technical Blogs !
+                    <br />Increase your tech quotient along with us
+                </p>
             </div>
             <div class="blogButtonContainer"><div class="Button"><a href="https://medium.com/@endeavourinsliet" target="_blank">READ OUR BLOGS</a></div></div>
         </div>
     </section>
-<!-- About -->
+    <!-- About -->
     <section class="aboutReference flex-center">
         <div class="imageShowCase flex-center">
             <!-- <img src="./images/steller.png" alt="" srcset=""> -->
@@ -62,14 +95,14 @@
                 about Us
             </div>
             <div class="mainPara">
-                A National Robotics Team with an impressive record of growth since last 6 Years. Founded with a purpose to spread the knowledge Robotics Technology among young engineering minds of SLIET 
+                A National Robotics Team with an impressive record of growth since last 6 Years. Founded with a purpose to spread the knowledge Robotics Technology among young engineering minds of SLIET
             </div>
             <div class="mainButton flex-right">
                 <div class="Button"><a href="./about.html">EXPLORE &nbsp; <i class="fas fa-long-arrow-alt-right"></i></a></div>
             </div>
         </div>
     </section>
-<!-- About -->
+    <!-- About -->
 
     <section class="domainReference">
         <div class="textShowCase flex-vertical-center">
@@ -86,14 +119,14 @@
         <div class="imageShowCase flex-center">
             <img src="./images/TunerX.png" alt="Domains-TunerX" srcset="">
         </div>
-        
+
     </section>
     <a id="domains" class="domains" target="_blank" rel="noopener noreferrer"></a>
-<!-- CARDS -->
+    <!-- CARDS -->
     <section class="cardsArray">
         <div class="cardText">
             <p class="cardMainText">OUR WORK DOMAINS</p>
-            <p class="cardTagText">New innovation, best quality than ever before.<br/></p>
+            <p class="cardTagText">New innovation, best quality than ever before.<br /></p>
         </div>
         <div class="cardContainer">
             <table class="cardTable">
@@ -150,10 +183,8 @@
             </table>
         </div>
     </section>
-<!-- CARDS END -->
-
-
-<!-- RESEARCH -->
+    <!-- CARDS END -->
+    <!-- RESEARCH -->
     <section class="researchReference">
         <div class="textShowCase flex-vertical-center">
             <div class="mainText">
@@ -170,98 +201,98 @@
             <img src="./images/wheelChair.png" alt="Research-Projects" srcset="">
         </div>
     </section>
-<!-- RESEARCH -->
+    <!-- RESEARCH -->
 
-<a class="sponsors" id="sponsors" target="_blank" rel="noopener noreferrer"></a>
-<section class="sponsersReference flex-center">
-    <div class="sponsers-section flex-center">
-        <div class="glass flex-center">
-            <a href="https://www.altair.com/" class="flex-center" target="_blank"><img src="./images/Altair_logo.png" alt="Altair_logo"></a>
+    <a class="sponsors" id="sponsors" target="_blank" rel="noopener noreferrer"></a>
+    <section class="sponsersReference flex-center">
+        <div class="sponsers-section flex-center">
+            <div class="glass flex-center">
+                <a href="https://www.altair.com/" class="flex-center" target="_blank"><img src="./images/Altair_logo.png" alt="Altair_logo"></a>
+            </div>
         </div>
-    </div>
-    <div class="sponsers-section flex-center">
-        <div class="glass flex-center">
-            <a href="https://www.solidworks.com/" class="flex-center" target="_blank"><img src="./images/SolidWorksLogo.png" alt="SolidWorksLogo"></a>
+        <div class="sponsers-section flex-center">
+            <div class="glass flex-center">
+                <a href="https://www.solidworks.com/" class="flex-center" target="_blank"><img src="./images/SolidWorksLogo.png" alt="SolidWorksLogo"></a>
+            </div>
         </div>
-    </div>
-    <!-- <div class="sponsers-section flex-center">
-        <div class="glass flex-center">
-            <a href="https://www.skyclanrc.com/" class="flex-center"><img src="./images/skyclanLogo.png" alt="skyclanLogo"></a>
+        <!-- <div class="sponsers-section flex-center">
+            <div class="glass flex-center">
+                <a href="https://www.skyclanrc.com/" class="flex-center"><img src="./images/skyclanLogo.png" alt="skyclanLogo"></a>
+            </div>
+        </div> -->
+        <div class="sponsers-section flex-center">
+            <div class="glass flex-center">
+                <a href="https://www.ansys.com/" class="flex-center" target="_blank"><img src="./images/ansys_logo.png" alt="ansysLogo"></a>
+            </div>
         </div>
-    </div> -->
-    <div class="sponsers-section flex-center">
-        <div class="glass flex-center">
-            <a href="https://www.ansys.com/" class="flex-center" target="_blank"><img src="./images/ansys_logo.png" alt="ansysLogo"></a>
+    </section>
+
+    <!-- ********** FOOTER ********** -->
+    <section class="footer">
+        <div class="connectionFooter flex-center">
+            <div class="connectionFooterOne flex-center">
+                <div class="endeavourLogoFooter flex-column-center"><img src="./images/logoSlietWhite.png" alt="Endeavour-Logo" srcset=""><img src="./images/footerLogo.png" alt="Endeavour-Logo" srcset=""></div>
+            </div>
+            <div class="connectionFooterTwo">
+                <!-- 1 -->
+                <div class="footerMainText">
+                    <!-- 1.1 -->
+                    E N D E A V O U R
+                </div>
+                <div class="footerTagText">
+                    <!-- 1.2 -->
+                    Strive to Create Difference
+                </div>
+                <div class="footerSocialIcons">
+                    <!-- 1.3 -->
+                    <a href="https://www.facebook.com/endeavoursliet"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/endeavoursliet/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/endeavoursliet/"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:endeavourinsliet@gmail.com"><i class="far fa-envelope"></i></a>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
-    
-<!-- ********** FOOTER ********** -->
-<section class="footer">
-    <div class="connectionFooter flex-center">
-        <div class="connectionFooterOne flex-center">
-            <div class="endeavourLogoFooter flex-column-center"><img src="./images/logoSlietWhite.png" alt="Endeavour-Logo" srcset=""><img src="./images/footerLogo.png" alt="Endeavour-Logo" srcset=""></div>
+        <div class="menuFooter">
+            <!-- 2 -->
+            <table class="menuFooterContainer">
+                <tr>
+                    <th>Our Team</th>
+                    <th>Our Works</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td><a href="./about.html#aboutTeam">About Us</a></td>
+                    <td><a href="./projects.html#UAVs">UAVs</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><a href="./about.html#ourHistory">Our History</a></td>
+                    <td><a href="./projects01.html#UGVs">UGVs</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><a href="./teams.html#ourTeam">Meet The Team</a></td>
+                    <td><a href="./research.html#research">Research Projects</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <div class="contactContainer">
+                <p><i class="fas fa-id-badge"></i> &nbsp Krishna Kumar &#58 <a href="tel:+917654323762">+91 7654323762</a></p>
+                <br />
+                <p><i class="fas fa-id-badge"></i> &nbsp Soham Das &#58 <a href="tel:+919740734156">+91 9740734156</a></p>
+            </div>
         </div>
-        <div class="connectionFooterTwo">
-        <!-- 1 -->
-        <div class="footerMainText">
-            <!-- 1.1 -->
-            E N D E A V O U R
-        </div>
-        <div class="footerTagText">
-            <!-- 1.2 -->
-            Strive to Create Difference
-        </div>
-        <div class="footerSocialIcons">
-            <!-- 1.3 -->
-            <a href="https://www.facebook.com/endeavoursliet"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/endeavoursliet/"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/company/endeavoursliet/"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:endeavourinsliet@gmail.com"><i class="far fa-envelope"></i></a>
-        </div>
-    </div>
-    </div>
-    <div class="menuFooter">
-        <!-- 2 -->
-        <table class="menuFooterContainer">
-            <tr>
-                <th>Our Team</th>
-                <th>Our Works</th>
-                <th></th>
-                <th></th>
-            </tr>
-            <tr>
-                <td><a href="./about.html#aboutTeam">About Us</a></td>
-                <td><a href="./projects.html#UAVs">UAVs</a></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td><a href="./about.html#ourHistory">Our History</a></td>
-                <td><a href="./projects01.html#UGVs">UGVs</a></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td><a href="./teams.html#ourTeam">Meet The Team</a></td>
-                <td><a href="./research.html#research">Research Projects</a></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-        </table>
-        <div class="contactContainer">
-            <p><i class="fas fa-id-badge"></i> &nbsp Krishna Kumar &#58 <a href="tel:+917654323762">+91 7654323762</a></p> 
-            <br />
-            <p><i class="fas fa-id-badge"></i> &nbsp Soham Das &#58 <a href="tel:+919740734156">+91 9740734156</a></p>
-        </div>
-    </div>
-</section>
-<!-- ********** FOOTER ********** -->
+    </section>
+    <!-- ********** FOOTER ********** -->
 </body>
 </html>
