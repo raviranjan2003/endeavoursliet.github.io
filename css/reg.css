@@ -47,8 +47,8 @@ body {
     margin-bottom : 30px;
 }
 .logo {
-    width: 200px;
-    height: 200px;
+    width: 23vw;
+    height: 23vw;
     
     margin : auto;
 }
@@ -75,19 +75,6 @@ body {
     /* display: flex; */
 }
 
-
-
-p {
-    font-size: 1rem;
-    font-weight : 200;
-    margin-bottom : 40px;
-}
-p span{
-    margin-bottom : 0px;
-}
-
-
-
 ::-webkit-input-placeholder {
     font-size: 20px;
 }
@@ -102,13 +89,11 @@ p span{
 .pageTitle {
     font-size: 40px;
     font-weight: bold;
-    margin-left: 50px;
 }
 
 .secondaryTitle {
     font-size: 20px;
     color: rgb(177, 55, 7);
-    margin-left: 50px;
     margin-bottom : 40px;
 }
 
@@ -129,7 +114,7 @@ p span{
 
 
     .formEntry:hover {
-        transition: ease 5s;
+        transition: ease 1s;
         width: 320px;
     }
 
@@ -159,35 +144,40 @@ p span{
         transition: all 0.5s ease 0s;
     }
 
-    .pop{
+    .pop_msg{
         height : 100px;
         width : 100%;
         background-color : grey;
         text-align : center;
         position : fixed;
         bottom : 0;
-        display : none;
-
+        display : block;
+        padding-top : 20px;
     }
-    .pop button{
+    .pop_msg button{
+        margin-top : 20px; 
         height : 40px;
         width  : 100px;
         background-color : white;
         border-radius  : 10px;
     }
 
-    radio{
-        margin : 10px;
-    }
 @media (max-width: 850px) {
     .container {
         flex-direction: column;
         align-items: center;
         padding : 5%;
+        margin-top : 20px;
     }
 
     .main, .content {
         width: 100%;
         margin-top : 40px;
+    }
+
+    .logo {
+        width: 43vw;
+        height: 43vw;
+        margin: auto;
     }
 }

@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Endeavour SLIET">
+    <meta property="og:description" content="An official robotics club of SLIET, Longowal">
+    <meta property="og:url" content="https://endeavoursliet.in">
+    <meta property="og:image" content="https://endeavoursliet.in/images/mainlogo.png">
+    <meta name="keywords" content="endeavour, endeavoursliet, sliet, endeavor, endeavorsliet, techfest, techfest22, madhuram, longowal, sangrur, delhi, iitbombay, iitdelhi, iit, nit, cfti, cuturalfest, mhrd, govt, endeavour recruitment">
+    <meta name="description" content="Official Website of Team Endeavour, Sliet Longowal">
+    <link rel="icon" type="image/png" href="./images/10Artboard 1_1white Endeavour.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
     <link rel="stylesheet" href="/css/reg.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Endeavour | register </title>
@@ -14,11 +23,11 @@
             <div class="endeavourLogo"><a href="./index.html#home"><img src="./images/mainlogo.png" alt="Endeavour-Logo" srcset=""></a></div>
         </div>
         <ul class="navArray">
-            <li class="navComponent flex-center"><a href="./index.html#home" class="flex-center activeTopNav">HOME</a></li>
+            <li class="navComponent flex-center"><a href="./index.html#home" class="flex-center">HOME</a></li>
             <li class="navComponent flex-center"><a href="./about.html#aboutTeam" class="flex-center">ABOUT US</a></li>
             <li class="navComponent flex-center"><a href="projects.html#UAVs" class="flex-center">DOMAINS</a></li>
             <li class="navComponent flex-center"><a href="./index.html#sponsors" class="flex-center">SPONSORS</a></li>
-            <li class="navComponent flex-center"><a href="#alumni" class="flex-center ">TEAM</a></li>
+            <li class="navComponent flex-center"><a href=".teams.html" class="flex-center ">TEAM</a></li>
         </ul>
         <div class="emptySpace25">
             <div class="endeavourLogo"><a href="http://sliet.ac.in/" target="_blank" rel="noopener noreferrer"><img src="./images/SLIET_in_Colours_of_ENDEAVOUR.png" alt="Endeavour-Logo" srcset=""></a></div>
@@ -46,6 +55,7 @@
 
             <p class="pageTitle title">Registration form</p>
             <p class="secondaryTitle title">Come and witness opportunities awaiting each day</p>
+            <p>* mandatory fields</p>
 
             <input type="text" class="formEntry" id="name" placeholder="Name*" />
             <input type="text" class="formEntry" id="email" placeholder="Email*" />
@@ -54,7 +64,7 @@
 
             <input type="text" class="formEntry" id="ten" placeholder="10th score*" />
             <input type="text" class="formEntry" id="twelve" placeholder="12th/Diploma score" />
-            <textarea class="formEntry" id="why" placeholder="Why should we select you*"></textarea>
+
 
             <select class="formEntry" id="prog">
                 <option vlaue"">Click to select programme*</option>
@@ -63,7 +73,7 @@
 
 
             </select>
-            
+
 
             <select class="formEntry" id="year">
                 <option value="">Click to select year*</option>
@@ -86,18 +96,20 @@
 
 
             <button class="formEntry" onclick="document.getElementById('getFile').click()">Click to upload Photo*</button>
-            <input type='file' id="getphoto" style="display:none">
-
-            <button class="formEntry" onclick="document.getElementById('getFile').click()">Click to upload Resume</button>
             <input type='file' id="getFile" style="display:none">
 
-            <input type="checkbox" class="cb">
-            <label class="cb"> I hereby declare that all the information provided above is correct to the best of my knowledge.</label><br/><br />
+            <!--<button class="formEntry" onclick="document.getElementById('getFile').click()">Click to upload Resume</button>
+    <input type='file' id="getFile" style="display:none">-->
+
+            <textarea class="formEntry" id="why" placeholder="Why should we select you*"></textarea>
+
+            <input type="checkbox" class="cb" id="checkit">
+            <label class="cb"> I hereby declare that all the information provided above is correct to the best of my knowledge.</label><br /><br />
 
             <button class="submit" id="submitbtn">Submit</button>
         </div>
     </div>
-    <div class="pop" id="pop">
+    <div class="pop_msg" id="pop">
         <h3 id="msg">message</h3>
         <button id="bty" onclick="clos()"> okay </button>
     </div>
@@ -105,7 +117,7 @@
     <script type="module">
 
         import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js'
-        import { getStorage, ref, uploadBytes } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-storage.js"
+        import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-storage.js"
         import { getDatabase, set, ref as dbRef } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js"
         const firebaseConfig = {
             apiKey: "AIzaSyCrdJVxZBixNQJQ4kR7g_Y7qCdGgpumwlg",
@@ -128,30 +140,42 @@
         };
 
         //INTIALISE DATABASE
-        initializeApp(firebaseConfig1);//initilise fire base kerne ke liye
+        initializeApp(firebaseConfig1);
 
         const root = getDatabase();
-        const storage = getStorage();
+        const storage = getStorage();        
 
-
-       
         
-
-        // 'file' comes from the Blob or File AP
         let uid="unknown"
-        let file;
-        function upload() {
-            const storageRef = ref(storage, uid);
-            uploadBytes(storageRef, file).then((snapshot) => {
-                console.log('Uploaded file!');
-            });
-        }
         
-
+        let photo;
+        function upload() {
+            
+            const storageRef = ref(storage, uid + "photo");
+            uploadBytes(storageRef, photo).then((snapshot) => {
+                console.log('Uploaded photo!');
+                geturl(storageRef)
+            });
+            
+        }
         const fileInput = document.getElementById('getFile');
         fileInput.onchange = () => {
             const selectedFile = fileInput.files[0];
-            file = selectedFile;
+            photo = selectedFile;
+        }
+
+        function geturl(refer) {
+            
+            getDownloadURL(refer)
+                .then((url) => {
+                  
+                    getready(url);
+                    // `url` is the download URL for 'images/stars.jpg'
+                })
+                .catch((error) => {
+                    // Handle any errors
+                });
+            
         }
 
         function clos() {
@@ -164,9 +188,9 @@
         }
 
         
-        function writeUserData(_name, mail, _contact, _reg, _prog, _year, _trade, _ten, _twelve, _why) {
-            uid = _reg;
-            set(dbRef(root, 'users/' + _reg), {
+        function writeUserData(_name, mail, _contact, _reg, _prog, _year, _trade, _ten, _twelve, _why, pht, res) {
+            
+            set(dbRef(root, 'registrations/' + uid), {
                 name: _name,
                 email: mail,
                 contactno: _contact,
@@ -176,11 +200,26 @@
                 trade: _trade,
                 ten: _ten,
                 twelve: _twelve,
-                why: _why
+                why: _why,
+                photo: pht
             });
-            
-            upload();
+           
             disp("thank you for registering \n we will contact you back soon")
+        }
+        function getready(pht) {
+            var username = document.getElementById('name').value;
+            var mail = document.getElementById('email').value;
+            var _contact = document.getElementById('contact').value;
+            var _reg = document.getElementById('regno').value;
+            var _ten = document.getElementById('ten').value;
+            var _twelve = document.getElementById('twelve').value;
+            var _why = document.getElementById('why').value;
+            var _prog = document.querySelector('#prog').value;
+            var _year = document.querySelector('#year').value;
+            var _trade = document.querySelector('#select1').value;
+
+            writeUserData(username, mail, _contact, _reg, _prog, _year, _trade, _ten, _twelve, _why,pht)
+            
         }
         submitbtn.addEventListener('click', (e) => {
             var username = document.getElementById('name').value;
@@ -190,32 +229,25 @@
             var _ten = document.getElementById('ten').value;
             var _twelve = document.getElementById('twelve').value;
             var _why = document.getElementById('why').value;
-
-            /*let prog = document.getElementsByName('prog')
-            var _prog = ""
-            if (prog[0].checked)
-                var _prog = "B.E"
-            else if (prog[1].checked)
-                var _prog = "ICD"
-
-            let year = document.getElementsByName('YEAR')
-            var _year = ""
-
-            if (year[1].checked)
-                _year = "second"
-            else if (year[2].checked)
-                _year = "third"
-            else if (year[0].checked)
-                _year = "first"*/
-
             var _prog = document.querySelector('#prog').value;
             var _year = document.querySelector('#year').value;
             var _trade = document.querySelector('#select1').value;
-
+            let el = document.getElementById('checkit');
             if (username && mail && _contact && _reg && _prog && _year && _trade && _ten && _why)
-                writeUserData(username, mail, _contact, _reg, _prog, _year, _trade, _ten, _twelve, _why)
-            else
+                if (photo) {
+                    if (el.checked) {
+                        uid = _reg
+                        disp("please wait.....")
+                        upload();
+                    } else
+                        disp("please check the tick box ")
+                    
+                }   
+                else
+                    disp("please upload photo")
+           else
                 disp("please fill out all the fields")
+            
         });
     </script>
     <!-- ********** FOOTER ********** -->
@@ -278,9 +310,9 @@
                 </tr>
             </table>
             <div class="contactContainer">
-                <p><i class="fas fa-id-badge"></i> &nbsp Utsav Anand &#58 <a href="tel:+918968343016">+91  8968343016</a></p>
+                <p><i class="fas fa-id-badge"></i> &nbsp Utsav Anand &#58 <a href="tel:+918968343016">+91 8968343016</a></p>
                 <br />
-                <p><i class="fas fa-id-badge"></i> &nbsp G Sai Harsh &#58 <a href="tel:+91 8085692977">+91 8085692977</a></p>
+                <p><i class="fas fa-id-badge"></i> &nbsp G Sai Harsh &#58 <a href="tel:+918085692977">+91 8085692977</a></p>
             </div>
         </div>
     </section>
