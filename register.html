@@ -47,8 +47,6 @@
                 From then, our team is continuously working on various projects and participating in hackathons and techfests at national level.
                 Looking for the opportunity for hands-on robots design?
                 You've the entered the right place! To all the passionate and enthusiastic learners,<br> Endeavour have got it all for you. Come, and begin with us. We'll together make it to success.<BR>
-
-
             </p>
         </div>
         <div class="main">
@@ -58,22 +56,21 @@
             <p>* mandatory fields</p>
 
             <input type="text" class="formEntry" id="name" placeholder="Name*" />
-            <input type="text" class="formEntry" id="email" placeholder="Email*" />
-            <input type="text" class="formEntry" id="contact" placeholder="Contact No*" />
-            <input type="text" class="formEntry" id="regno" placeholder="Reg No*" />
+            <input type="email" class="formEntry" id="email" placeholder="Email*" />
+            <input type="tel" class="formEntry" id="contact" placeholder="Contact No*" />
+            <input type="number" class="formEntry" id="regno" placeholder="Reg No*" />
 
             <input type="text" class="formEntry" id="ten" placeholder="10th score*" />
             <input type="text" class="formEntry" id="twelve" placeholder="12th/Diploma score" />
+
+            <textarea class="formEntry" id="why" placeholder="Why should we select you*"></textarea>
 
 
             <select class="formEntry" id="prog">
                 <option vlaue"">Click to select programme*</option>
                 <option vlaue"B.E">B.E</option>
                 <option vlaue"ICD">ICD</option>
-
-
             </select>
-
 
             <select class="formEntry" id="year">
                 <option value="">Click to select year*</option>
@@ -83,7 +80,7 @@
             </select>
 
             <select class="formEntry" id="select1">
-                <option value="">Click to select branch</option>
+                <option value="">Click to select branch*</option>
                 <option value="Computer">Computer science</option>
                 <option value="Mechanical">Mechanical</option>
                 <option value="Electronics">Electronics</option>
@@ -94,7 +91,6 @@
                 <option value="Food">Food</option>
             </select>
 
-
             <button id="upbtn" class="formEntry" onclick="document.getElementById('getFile').click()">Click to upload Photo*</button>
             <input type='file' id="getFile" style="display:none">
 
@@ -104,12 +100,12 @@
             <!--<button class="formEntry" onclick="document.getElementById('getFile').click()">Click to upload Resume</button>
     <input type='file' id="getFile" style="display:none">-->
 
-            <textarea class="formEntry" id="why" placeholder="Why should we select you*"></textarea>
 
             <input type="checkbox" class="cb" id="checkit">
             <label class="cb"> I hereby declare that all the information provided above is correct to the best of my knowledge.</label><br /><br />
 
-            <button class="submit" id="submitbtn">Submit</button>
+            <input type="submit" id="submitbtn" class="submit" />
+            
         </div>
     </div>
     <div class="pop_msg" id="pop">
@@ -121,28 +117,22 @@
         import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js'
         import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-storage.js"
         import { getDatabase, set, ref as dbRef } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js"
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
         const firebaseConfig = {
-            apiKey: "AIzaSyCrdJVxZBixNQJQ4kR7g_Y7qCdGgpumwlg",
-            authDomain: "fir-frontend2-3f205.firebaseapp.com",
-            databaseURL: "https://fir-frontend2-3f205-default-rtdb.firebaseio.com",
-            projectId: "fir-frontend2-3f205",
-            storageBucket: "fir-frontend2-3f205.appspot.com",
-            messagingSenderId: "263850037373",
-            appId: "1:263850037373:web:84bf82a0e99ff54162a114"
-        };
-        const firebaseConfig1 = {
-            apiKey: "AIzaSyBDORNRQMxzUTMZcldSE2VR8BKoTa1PI74",
-            authDomain: "code-with-zio.firebaseapp.com",
-            databaseURL: "https://code-with-zio.firebaseio.com",
-            projectId: "code-with-zio",
-            storageBucket: "code-with-zio.appspot.com",
-            messagingSenderId: "245478950948",
-            appId: "1:245478950948:web:f1390864386c276f6630b1",
-            measurementId: "G-75TD9Y3HXC"
+            apiKey: "AIzaSyCLiMyt2x2k2ae-MlUlkd65opaCcS10dIk",
+            authDomain: "website-3dd2f.firebaseapp.com",
+            databaseURL: "https://website-3dd2f-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "website-3dd2f",
+            storageBucket: "website-3dd2f.appspot.com",
+            messagingSenderId: "516436685491",
+            appId: "1:516436685491:web:b571c735bebe709c7836c6",
+            measurementId: "G-HNQEGEB8P1"
         };
 
         //INTIALISE DATABASE
-        initializeApp(firebaseConfig1);
+        initializeApp(firebaseConfig);
 
         const root = getDatabase();
         const storage = getStorage();        
