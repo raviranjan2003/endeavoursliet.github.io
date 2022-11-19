@@ -28,6 +28,10 @@
     <div class="container">
 
         <div class="content">
+
+            <div class="left">
+                <div class="logo"><a href="#"><img src="./images/footerLogo.png" alt="Endeavour-Logo" srcset=""></a></div>
+            </div>
             <p class="content-dealing">
                 Endeavour is the official robotics team of SLIET, Punjab, founded in 2014.
                 Connecting like-minded yet unique intellectuals from all branches of engineering and aligning their skills and interests was the main objective behind the starting of Endeavour.<br>
@@ -43,44 +47,54 @@
             <p class="pageTitle title">Registration form</p>
             <p class="secondaryTitle title">Come and witness opportunities awaiting each day</p>
 
-            <input type="text" class="formEntry" id="name" placeholder="Name" />
-            <input type="text" class="formEntry" id="email" placeholder="Email" />
-            <input type="text" class="formEntry" id="contact" placeholder="Contact No" />
-            <input type="text" class="formEntry" id="regno" placeholder="Reg No" />
+            <input type="text" class="formEntry" id="name" placeholder="Name*" />
+            <input type="text" class="formEntry" id="email" placeholder="Email*" />
+            <input type="text" class="formEntry" id="contact" placeholder="Contact No*" />
+            <input type="text" class="formEntry" id="regno" placeholder="Reg No*" />
 
-            <input type="text" class="formEntry" id="ten" placeholder="10th score" />
-            <input type="text" class="formEntry" id="twelve" placeholder="12th score" />
-            <textarea class="formEntry" id="why" placeholder="Why should we select you"></textarea>
+            <input type="text" class="formEntry" id="ten" placeholder="10th score*" />
+            <input type="text" class="formEntry" id="twelve" placeholder="12th/Diploma score" />
+            <textarea class="formEntry" id="why" placeholder="Why should we select you*"></textarea>
 
-            <p id="prog">
-                <span>Programme</span><br /><br />
-                <input type="radio" id="btech" class="radio" name="prog" value="btech">B.E
-                <input type="radio" id="icd" class="radio" name="prog" value="icd">ICD
-            </p>
+            <select class="formEntry" id="prog">
+                <option vlaue"">Click to select programme*</option>
+                <option vlaue"B.E">B.E</option>
+                <option vlaue"ICD">ICD</option>
 
-            <p id="YEAR">
-                <span>Year</span><br /><br />
-                <input type="radio" id=ft class="radio" name="YEAR" value="btech">First
-                <input type="radio" id=sd class="radio" name="YEAR" value="icd">Second
-                <input type="radio" id=tr class="radio" name="YEAR" value="btech">Third
-            </p>
 
-            <p>
-                <span>Branch</span>
-                <select id="select1">
-                    <option value="free">Free</option>
-                    <option value="basic">Basic</option>
-                    <option value="premium">Premium</option>
-                </select>
-            </p>
+            </select>
+            
 
-            <p>
-                <span>Upload your resume</span><br /><br />
-                <input type="File" class="file1">
-            </p>
+            <select class="formEntry" id="year">
+                <option value="">Click to select year*</option>
+                <option value="First">First</option>
+                <option value="Second">Second</option>
+                <option value="Third">Third</option>
+            </select>
+
+            <select class="formEntry" id="select1">
+                <option value="">Click to select branch</option>
+                <option value="Computer">Computer science</option>
+                <option value="Mechanical">Mechanical</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Electrical">Electrical</option>
+                <option value="Instrumentation">Instrumentation</option>
+                <option value="Chemical">Chemical</option>
+                <option value="Civil">Civil</option>
+                <option value="Food">Food</option>
+            </select>
+
+
+            <button class="formEntry" onclick="document.getElementById('getFile').click()">Click to upload Photo*</button>
+            <input type='file' id="getphoto" style="display:none">
+
+            <button class="formEntry" onclick="document.getElementById('getFile').click()">Click to upload Resume</button>
+            <input type='file' id="getFile" style="display:none">
+
+            <input type="checkbox" class="cb">
+            <label class="cb"> I hereby declare that all the information provided above is correct to the best of my knowledge.</label><br/><br />
+
             <button class="submit" id="submitbtn">Submit</button>
-
-
         </div>
     </div>
     <div class="pop" id="pop">
@@ -89,8 +103,10 @@
     </div>
 
     <script type="module">
-        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js'
-        import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-database.js"
+
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js'
+        import { getStorage, ref, uploadBytes } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-storage.js"
+        import { getDatabase, set, ref as dbRef } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js"
         const firebaseConfig = {
             apiKey: "AIzaSyCrdJVxZBixNQJQ4kR7g_Y7qCdGgpumwlg",
             authDomain: "fir-frontend2-3f205.firebaseapp.com",
@@ -110,9 +126,33 @@
             appId: "1:245478950948:web:f1390864386c276f6630b1",
             measurementId: "G-75TD9Y3HXC"
         };
+
         //INTIALISE DATABASE
         initializeApp(firebaseConfig1);//initilise fire base kerne ke liye
+
         const root = getDatabase();
+        const storage = getStorage();
+
+
+       
+        
+
+        // 'file' comes from the Blob or File AP
+        let uid="unknown"
+        let file;
+        function upload() {
+            const storageRef = ref(storage, uid);
+            uploadBytes(storageRef, file).then((snapshot) => {
+                console.log('Uploaded file!');
+            });
+        }
+        
+
+        const fileInput = document.getElementById('getFile');
+        fileInput.onchange = () => {
+            const selectedFile = fileInput.files[0];
+            file = selectedFile;
+        }
 
         function clos() {
             document.getElementById("pop").style.display = "none";
@@ -123,9 +163,10 @@
             document.getElementById("msg").innerHTML = x;
         }
 
-
+        
         function writeUserData(_name, mail, _contact, _reg, _prog, _year, _trade, _ten, _twelve, _why) {
-            set(ref(root, 'users/' + _reg), {
+            uid = _reg;
+            set(dbRef(root, 'users/' + _reg), {
                 name: _name,
                 email: mail,
                 contactno: _contact,
@@ -137,6 +178,8 @@
                 twelve: _twelve,
                 why: _why
             });
+            
+            upload();
             disp("thank you for registering \n we will contact you back soon")
         }
         submitbtn.addEventListener('click', (e) => {
@@ -148,7 +191,7 @@
             var _twelve = document.getElementById('twelve').value;
             var _why = document.getElementById('why').value;
 
-            let prog = document.getElementsByName('prog')
+            /*let prog = document.getElementsByName('prog')
             var _prog = ""
             if (prog[0].checked)
                 var _prog = "B.E"
@@ -163,11 +206,13 @@
             else if (year[2].checked)
                 _year = "third"
             else if (year[0].checked)
-                _year = "first"
+                _year = "first"*/
 
+            var _prog = document.querySelector('#prog').value;
+            var _year = document.querySelector('#year').value;
             var _trade = document.querySelector('#select1').value;
 
-            if (username && mail && _contact && _reg && _prog && _year && _trade && _ten && _twelve && _why)
+            if (username && mail && _contact && _reg && _prog && _year && _trade && _ten && _why)
                 writeUserData(username, mail, _contact, _reg, _prog, _year, _trade, _ten, _twelve, _why)
             else
                 disp("please fill out all the fields")
@@ -233,9 +278,9 @@
                 </tr>
             </table>
             <div class="contactContainer">
-                <p><i class="fas fa-id-badge"></i> &nbsp Krishna Kumar &#58 <a href="tel:+917654323762">+91 7654323762</a></p>
+                <p><i class="fas fa-id-badge"></i> &nbsp Utsav Anand &#58 <a href="tel:+918968343016">+91  8968343016</a></p>
                 <br />
-                <p><i class="fas fa-id-badge"></i> &nbsp Soham Das &#58 <a href="tel:+919740734156">+91 9740734156</a></p>
+                <p><i class="fas fa-id-badge"></i> &nbsp G Sai Harsh &#58 <a href="tel:+91 8085692977">+91 8085692977</a></p>
             </div>
         </div>
     </section>
