@@ -95,8 +95,11 @@
             </select>
 
 
-            <button id="upbtn"class="formEntry" onclick="document.getElementById('getFile').click()">Click to upload Photo*</button>
+            <button id="upbtn" class="formEntry" onclick="document.getElementById('getFile').click()">Click to upload Photo*</button>
             <input type='file' id="getFile" style="display:none">
+
+            <button id="resbtn" class="formEntry" onclick="document.getElementById('getRes').click()">Click to upload Resume</button>
+            <input type='file' id="getRes" style="display:none">
 
             <!--<button class="formEntry" onclick="document.getElementById('getFile').click()">Click to upload Resume</button>
     <input type='file' id="getFile" style="display:none">-->
@@ -115,7 +118,6 @@
     </div>
 
     <script type="module">
-
         import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js'
         import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-storage.js"
         import { getDatabase, set, ref as dbRef } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js"
@@ -144,19 +146,45 @@
 
         const root = getDatabase();
         const storage = getStorage();        
-
         
         let uid="unknown"
-        
         let photo;
+        let resume;
+
         function upload() {
-            
             const storageRef = ref(storage, uid + "photo");
             uploadBytes(storageRef, photo).then((snapshot) => {
                 console.log('Uploaded photo!');
-                geturl(storageRef)
+
+                getDownloadURL(storageRef)
+                    .then((url) => {
+                        if(resume)
+                            upload1(url);
+                        else
+                            getready(url,"");
+                        // `url` is the download URL for 'images/stars.jpg'
+                    })
+                    .catch((error) => {
+                        // Handle any errors
+                    });
             });
             
+        }
+        function upload1(x) {
+            const storageRef = ref(storage, uid + "resume");
+            uploadBytes(storageRef, resume).then((snapshot) => {
+                console.log('Uploaded resume!');
+
+                getDownloadURL(storageRef)
+                    .then((url) => {
+                        getready(x, url);
+                        // `url` is the download URL for 'images/stars.jpg'
+                    })
+                    .catch((error) => {
+                        // Handle any errors
+                    });
+            });
+
         }
         const fileInput = document.getElementById('getFile');
         fileInput.onchange = () => {
@@ -165,17 +193,14 @@
             document.getElementById('upbtn').innerHTML = 'photo : ' + photo.name;
 
         }
+        const fileInput1 = document.getElementById('getRes');
+        fileInput1.onchange = () => {
+            const selectedFile = fileInput1.files[0];
+            resume = selectedFile;
+            document.getElementById('resbtn').innerHTML = 'File : ' + resume.name;
 
-        function geturl(refer) {
-            getDownloadURL(refer)
-                .then((url) => {
-                    getready(url);
-                    // `url` is the download URL for 'images/stars.jpg'
-                })
-                .catch((error) => {
-                    // Handle any errors
-                });
         }
+
         let done=false
         function close() {
             if(!done)
@@ -209,12 +234,13 @@
                 ten: _ten,
                 twelve: _twelve,
                 why: _why,
-                photo: pht
+                photo: pht,
+                resume: res
             });
             done = true;
             disp("Thank you for registering we will contact you back soon")
         }
-        function getready(pht) {
+        function getready(pht,res) {
             var username = document.getElementById('name').value;
             var mail = document.getElementById('email').value;
             var _contact = document.getElementById('contact').value;
@@ -226,7 +252,7 @@
             var _year = document.querySelector('#year').value;
             var _trade = document.querySelector('#select1').value;
 
-            writeUserData(username, mail, _contact, _reg, _prog, _year, _trade, _ten, _twelve, _why,pht)
+            writeUserData(username, mail, _contact, _reg, _prog, _year, _trade, _ten, _twelve, _why,pht,res)
             
         }
         submitbtn.addEventListener('click', (e) => {
@@ -245,7 +271,7 @@
                 if (username && mail && _contact && _reg && _prog && _year && _trade && _ten && _why)
                     if (photo) {
                         if (el.checked) {
-                            uid = _reg
+                            uid = _reg + " " + Date.now();
                             disp("Please wait...  uploading...")
                             upload();
                         } else
