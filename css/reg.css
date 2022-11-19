@@ -115,7 +115,7 @@ body {
 
     .formEntry:hover {
         transition: ease 1s;
-        width: 320px;
+        width: 300px;
     }
 
     .formEntry placeholder {
@@ -147,12 +147,13 @@ body {
     .pop_msg{
         height : 100px;
         width : 100%;
-        background-color : grey;
+        background-color : maroon;
         text-align : center;
         position : fixed;
-        bottom : 0;
+        bottom : 40%;
         display : block;
         padding-top : 20px;
+        color : white;
     }
     .pop_msg button{
         margin-top : 20px; 

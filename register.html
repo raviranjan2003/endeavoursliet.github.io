@@ -95,7 +95,7 @@
             </select>
 
 
-            <button class="formEntry" onclick="document.getElementById('getFile').click()">Click to upload Photo*</button>
+            <button id="upbtn"class="formEntry" onclick="document.getElementById('getFile').click()">Click to upload Photo*</button>
             <input type='file' id="getFile" style="display:none">
 
             <!--<button class="formEntry" onclick="document.getElementById('getFile').click()">Click to upload Resume</button>
@@ -111,7 +111,7 @@
     </div>
     <div class="pop_msg" id="pop">
         <h3 id="msg">message</h3>
-        <button id="bty" onclick="clos()"> okay </button>
+        <button id="bty" onclick="close()"> okay </button>
     </div>
 
     <script type="module">
@@ -162,26 +162,34 @@
         fileInput.onchange = () => {
             const selectedFile = fileInput.files[0];
             photo = selectedFile;
+            document.getElementById('upbtn').innerHTML = 'photo : ' + photo.name;
+
         }
 
         function geturl(refer) {
-            
             getDownloadURL(refer)
                 .then((url) => {
-                  
                     getready(url);
                     // `url` is the download URL for 'images/stars.jpg'
                 })
                 .catch((error) => {
                     // Handle any errors
                 });
-            
         }
-
-        function clos() {
-            document.getElementById("pop").style.display = "none";
+        let done=false
+        function close() {
+            if(!done)
+                document.getElementById("pop").style.display = "none";
+            else
+                window.location.href = "./about.html";
         }
-        clos()
+        bty.addEventListener('click', (e) => {
+            if (!done)
+                document.getElementById("pop").style.display = "none";
+            else
+                window.location.href = "./about.html";
+        });
+        close();
         function disp(x) {
             document.getElementById("pop").style.display = "block";
             document.getElementById("msg").innerHTML = x;
@@ -203,8 +211,8 @@
                 why: _why,
                 photo: pht
             });
-           
-            disp("thank you for registering \n we will contact you back soon")
+            done = true;
+            disp("Thank you for registering we will contact you back soon")
         }
         function getready(pht) {
             var username = document.getElementById('name').value;
@@ -222,31 +230,34 @@
             
         }
         submitbtn.addEventListener('click', (e) => {
-            var username = document.getElementById('name').value;
-            var mail = document.getElementById('email').value;
-            var _contact = document.getElementById('contact').value;
-            var _reg = document.getElementById('regno').value;
-            var _ten = document.getElementById('ten').value;
-            var _twelve = document.getElementById('twelve').value;
-            var _why = document.getElementById('why').value;
-            var _prog = document.querySelector('#prog').value;
-            var _year = document.querySelector('#year').value;
-            var _trade = document.querySelector('#select1').value;
-            let el = document.getElementById('checkit');
-            if (username && mail && _contact && _reg && _prog && _year && _trade && _ten && _why)
-                if (photo) {
-                    if (el.checked) {
-                        uid = _reg
-                        disp("please wait.....")
-                        upload();
-                    } else
-                        disp("please check the tick box ")
-                    
-                }   
+            if (!done) {
+                var username = document.getElementById('name').value;
+                var mail = document.getElementById('email').value;
+                var _contact = document.getElementById('contact').value;
+                var _reg = document.getElementById('regno').value;
+                var _ten = document.getElementById('ten').value;
+                var _twelve = document.getElementById('twelve').value;
+                var _why = document.getElementById('why').value;
+                var _prog = document.querySelector('#prog').value;
+                var _year = document.querySelector('#year').value;
+                var _trade = document.querySelector('#select1').value;
+                let el = document.getElementById('checkit');
+                if (username && mail && _contact && _reg && _prog && _year && _trade && _ten && _why)
+                    if (photo) {
+                        if (el.checked) {
+                            uid = _reg
+                            disp("Please wait...  uploading...")
+                            upload();
+                        } else
+                            disp("Please check the tick box ")
+
+                    }
+                    else
+                        disp("please upload photo")
                 else
-                    disp("please upload photo")
-           else
-                disp("please fill out all the fields")
+                    disp("please fill out all the fields")
+
+            }
             
         });
     </script>
