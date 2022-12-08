@@ -1,108 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="./images/10Artboard 1_1white Endeavour.png">
     <title>Our Team | Endeavour</title>
-    <meta name="keywords" content="endeavour, endeavoursliet, sliet, endeavor, endeavorsliet, techfest, techfest22, madhuram, longowal, sangrur, delhi, iitbombay, iitdelhi, iit, nit, cfti, cuturalfest, mhrd, govt, endeavour recruitment">
+    <meta name="keywords"
+        content="endeavour, endeavoursliet, sliet, endeavor, endeavorsliet, techfest, techfest22, madhuram, longowal, sangrur, delhi, iitbombay, iitdelhi, iit, nit, cfti, cuturalfest, mhrd, govt, endeavour recruitment">
     <meta name="description" content="An official robotics club of SLIET">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/styleTeams.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/front.css">
 </head>
 
 <body>
     <!-- TOP NAVIGATION -->
-    <nav class="topNav">
-        <div class="emptySpace25">
-            <div class="endeavourLogo"><a href="./index.html#home"><img src="./images/mainlogo.png" alt="Endeavour-Logo" srcset=""></a></div>
-        </div>
-        <ul class="navArray">
-            <li class="navComponent flex-center"><a href="./index.html#home" class="flex-center">HOME</a></li>
-            <li class="navComponent flex-center"><a href="./about.html#aboutTeam" class="flex-center">ABOUT US</a></li>
-            <li class="navComponent flex-center"><a href="projects.html#UAVs" class="flex-center">DOMAINS</a></li>
-            <li class="navComponent flex-center"><a href="./index.html#sponsors" class="flex-center">SPONSORS</a></li>
-            <li class="navComponent flex-center"><a href="#alumni" class="flex-center activeTopNav">TEAM</a></li>
-        </ul>
-        <div class="emptySpace25">
-            <div class="endeavourLogo"><a href="http://sliet.ac.in/" target="_blank" rel="noopener noreferrer"><img src="./images/SLIET_in_Colours_of_ENDEAVOUR.png" alt="Endeavour-Logo" srcset=""></a></div>
-        </div>
-    </nav>
+
     <!-- TOP NAVIGATION -->
     <!-- INTRODUCTION -->
-    <section class="intro">
+    <!-- <section class="intro">
         <p class="endeavourText">ENDEAVOUR</p>
         <p class="endeavourTagline">STRIVE TO CREATE DIFFERENCE</p>
-    </section>
-<!-- INTRODUCTION -->
+    </section> -->
+    <!-- INTRODUCTION -->
 
     <!-- Navigator -->
-    <nav class="navbar">
-        <ul class="nav-list">
-            <li class="flex-center"><a href="#alumni" >Faculty</a></li>
-            <li class="flex-center"><a href="#faculty" >Alumni</a></li>
-            <li class="flex-center"><a href="#core_committee" >Endeavour Committee</a></li>
-            <li class="flex-center"><a href="#members" >Members</a></li>
-        </ul>
-    </nav>
+    <div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+        <script>window.onload = function () {
+                Particles.init({
+                    selector: ".background"
+                });
+            };
+            const particles = Particles.init({
+                selector: ".background",
+                color: ["#03dac6", "#ff0266", "#000000"],
+                connectParticles: true,
+                responsive: [
+                    {
+                        breakpoint: 100,
+                        options: {
+                            color: ["#faebd7", "#03dac6", "#ff0266"],
+                            maxParticles: 500,
+                            connectParticles: true
+                        }
+                    }
+                ]
+            });
+          // }
+        </script>
+        <section class="nav">
+            <h1>ENDEAVOUR</h1>
+            <h3 class="span loader"><span class="m">S</span><span class="m">T</span><span class="m">R</span><span
+                    class="m">I</span><span class="m">V</span><span class="m">E</span>&nbsp;<span
+                    class="m">T</span><span class="m">O</span&nbsp;><span class="m">&nbsp;</span><span
+                        class="m">C</span><span class="m">R</span><span class="m"></span><span class="m">E</span><span
+                        class="m">A</span><span class="m">T</span><span class="m">E</span>&nbsp;<span
+                        class="m">D</span><span class="m">I</span><span class="m">F</span><span class="m">F</span><span
+                        class="m">E</span><span class="m">R</span><span class="m">E</span><span class="m">N</span><span
+                        class="m">C</span><span class="m">E</span></h3>
+        </section>
+
+        <canvas class="background"></canvas>
+
+
+
+    </div>
+    <div class="navSticky">
+        <nav class="topNav">
+            <div class="emptySpace25">
+                <div class="endeavourLogo"><a href="./index.html#home"><img src="./images/mainlogo.png"
+                            alt="Endeavour-Logo" srcset=""></a>
+                </div>
+            </div>
+            <ul class="navArray">
+                <li class="navComponent flex-center"><a href="./index.html#home" class="flex-center">HOME</a></li>
+                <li class="navComponent flex-center"><a href="./about.html#aboutTeam" class="flex-center">ABOUT US</a>
+                </li>
+                <li class="navComponent flex-center"><a href="projects.html#UAVs" class="flex-center">DOMAINS</a></li>
+                <li class="navComponent flex-center"><a href="./index.html#sponsors" class="flex-center">SPONSORS</a>
+                </li>
+                <li class="navComponent flex-center"><a href="#alumni" class="flex-center activeTopNav">TEAM</a></li>
+            </ul>
+            <div class="emptySpace25">
+                <div class="endeavourLogo"><a href="http://sliet.ac.in/" target="_blank" rel="noopener noreferrer"><img
+                            src="./images/SLIET_in_Colours_of_ENDEAVOUR.png" alt="Endeavour-Logo" srcset=""></a></div>
+            </div>
+        </nav>
+
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li class="flex-center"><a href="#alumni">Faculty</a></li>
+                <li class="flex-center"><a href="#faculty">Alumni</a></li>
+                <li class="flex-center"><a href="#core_committee">Endeavour Committee</a></li>
+                <li class="flex-center"><a href="#members">Members</a></li>
+            </ul>
+        </nav>
+    </div>
     <a id="alumni" target="_blank" rel="noopener noreferrer"></a>
     <!-- Navigator -->
     <section class="faculty-section">
-    <div class="team-section">
-        <div class="container">
-            <div class="row">
-                <div class="section-title">
-                    <h1 >Our Faculty</h1>
-                    <!-- <p>core</p> -->
+        <div class="team-section">
+            <div class="container">
+                <div class="row">
+                    <div class="section-title">
+                        <h1>Our Faculty</h1>
+                        <!-- <p>core</p> -->
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="team-items">
-                    <div class="item">
-                        <img src="images/arora1.jpg" alt="team" />
-                        <div class="inner">
-                            <div class="info">
-                                <h5><abbr title="Dr.Ajat Shatru Arora">Dr. A.S. Arora</abbr></h5>
-                                <!--Name-->
-                                <p>Our Mentor <br> <abbr title="Professor (EIE Department)">Professor EIE</abbr>  </p>
-                                <!--Post-->
-                                <div class="social-links">
-                                    <a href="mailto:ajatsliet@yahoo.com?subject=Enquiry about team Endeavour"><span
-                                            class="fa fa-envelope"></span></a>
-                                    <!--linkedin-->
-                                    <a href="https://www.linkedin.com/in/ajat-shatru-arora-2956625"><span
-                                            class="fa fa-linkedin"></span></a>
-                                    <!--mail-->
+                <div class="row">
+                    <div class="team-items">
+                        <div class="item">
+                            <img src="images/arora1.jpg" alt="team" />
+                            <div class="inner">
+                                <div class="info">
+                                    <h5><abbr title="Dr.Ajat Shatru Arora">Dr. A.S. Arora</abbr></h5>
+                                    <!--Name-->
+                                    <p>Our Mentor <br> <abbr title="Professor (EIE Department)">Professor EIE</abbr>
+                                    </p>
+                                    <!--Post-->
+                                    <div class="social-links">
+                                        <a href="mailto:ajatsliet@yahoo.com?subject=Enquiry about team Endeavour"><span
+                                                class="fa fa-envelope"></span></a>
+                                        <!--linkedin-->
+                                        <a href="https://www.linkedin.com/in/ajat-shatru-arora-2956625"><span
+                                                class="fa fa-linkedin"></span></a>
+                                        <!--mail-->
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="item">
-                        <img src="images/amrik2.jpg" alt="team" />
-                        <div class="inner">
-                            <div class="info">
-                                <h5> Dr. Amrik Singh </h5>
-                                <!--Name-->
-                                <p>Our Faculty Advisor<br>Associate Professor</p>
-                                <!--Post-->
-                                <div class="social-links">
-                                    <a href="mailto:hanspalamriksingh@gmail.com?subject=Enquiry about team Endeavour"><span
-                                            class="fa fa-envelope"></span></a>
-                                    <!--linkedin-->
-                                    <a href="https://www.linkedin.com/in/amriksinghhanspal"><span
-                                            class="fa fa-linkedin"></span></a>
-                                    <!--mail-->
+                        <div class="item">
+                            <img src="images/amrik2.jpg" alt="team" />
+                            <div class="inner">
+                                <div class="info">
+                                    <h5> Dr. Amrik Singh </h5>
+                                    <!--Name-->
+                                    <p>Our Faculty Advisor<br>Associate Professor</p>
+                                    <!--Post-->
+                                    <div class="social-links">
+                                        <a
+                                            href="mailto:hanspalamriksingh@gmail.com?subject=Enquiry about team Endeavour"><span
+                                                class="fa fa-envelope"></span></a>
+                                        <!--linkedin-->
+                                        <a href="https://www.linkedin.com/in/amriksinghhanspal"><span
+                                                class="fa fa-linkedin"></span></a>
+                                        <!--mail-->
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
-          
                 </div>
-            </div>
             </div>
     </section>
 
@@ -113,7 +169,7 @@
         <div class="container">
             <div class="row">
                 <div class="section-title">
-                    <h1 >Our Alumni</h1>
+                    <h1>Our Alumni</h1>
                     <!-- <p>core</p> -->
                 </div>
             </div>
@@ -366,8 +422,7 @@
                                 <p> <abbr title="Robotic Tech Lead">Robotic Tech.</abbr> </p>
                                 <!--Post-->
                                 <div class="social-links">
-                                    <a href=""><span
-                                            class="fa fa-envelope"></span></a>
+                                    <a href=""><span class="fa fa-envelope"></span></a>
                                     <!--linkedin-->
                                     <a href="https://www.linkedin.com/in/amit-thakur-53168911b"><span
                                             class="fa fa-linkedin"></span></a>
@@ -980,7 +1035,7 @@
                                     <!--linkedin-->
                                     <a href="https://www.linkedin.com/in/shivotkarsh-raj"><span
                                             class="fa fa-linkedin"></span></a>
-                                    <!--mail-->CSX
+                                    <!--mail-->
                                 </div>
                             </div>
                         </div>
@@ -1008,21 +1063,21 @@
             </div>
         </div>
     </section>
-    <!-- Alumni -->
+
     <a id="core_committee" target="_blank" rel="noopener noreferrer"></a>
     <!-- Committee -->
     <section class="team-section">
         <div class="container">
             <div class="row">
                 <div class="section-title">
-                    <h1 >Endeavour Committee</h1>
+                    <h1>FOUNDERS</h1>
                     <!-- <p>core</p> -->
                 </div>
             </div>
             <div class="row">
                 <div class="team-items">
-                    
-                    
+
+
                     <div class="item">
                         <img src="images/SOHAM DAS.jpeg" alt="team" />
                         <div class="inner">
@@ -1039,212 +1094,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item">
-                        <img src="images/KRISHNA KUMAR.jpeg" alt="team" />
-                        <div class="inner">
-                            <div class="info">
-                                <h5>Krishna Kumar</h5>
-                                <p><abbr title="Coordinator">Core Committee</abbr></p>
-                                <div class="social-links">
-                                    <a href="mailto:krishnakumar3129915@gmail.com?subject=Enquiry about team Endeavour">
-                                        <span class="fa fa-envelope"></span>
-                                    </a>
-                                    <a href="https://www.linkedin.com/in/krishna-kumar-8ab5a5173/">
-                                        <span class="fa fa-linkedin"></span>
-                                    </a>
-                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="images/AASHITA SARAN.jpg" alt="team" />
-                        <div class="inner">
-                            <div class="info">
-                                <h5>Aashita Saran </h5>
-                                <p>Core Committee</p>
-                                <div class="social-links">
-                                    <a href="mailto:aashita.saran@gmail.com ?subject=Enquiry about team Endeavour">
-                                        <span class="fa fa-envelope"></span>
-                                    </a>
-                                    <a href="https://www.linkedin.com/in/aashita-saran-7a62011b8">
-                                        <span class="fa fa-linkedin"></span>
-                                    </a>
-                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="images/ABHISHEK YADAV.jpg" alt="team" />
-                        <div class="inner">
-                            <div class="info">
-                                <h5>Abhishek Yadav</h5>
-                                <p><abbr title="Convener & ICD Mentor & PR">Core Committee</abbr></p>
-                                <div class="social-links">
-                                    <a href="mailto:yadavabhiyan@gmail.com?subject=Enquiry about team Endeavour">
-                                        <span class="fa fa-envelope"></span>
-                                    </a>
-                                    <a href="https://www.linkedin.com/in/abhishekyadav24">
-                                        <span class="fa fa-linkedin"></span>
-                                    </a>
-                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="images/SATVIK RAJ PATEL.jpg" alt="team" />
-                        <div class="inner">
-                            <div class="info">
-                                <h5>Satvik Raj Patel </h5>
-                                <p>
-                                    Core Committee
-                                </p>
-                                <div class="social-links">
-                                    <a href="mailto:rajpatel150800@gmail.com ?subject=Enquiry about team Endeavour">
-                                        <span class="fa fa-envelope"></span>
-                                    </a>
-                                    <a href="https://www.linkedin.com/in/raj-patel-957420155">
-                                        <span class="fa fa-linkedin"></span>
-                                    </a>
-                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-
-                    <div class="item">
-                        <img src="images/AYUSH RAI.jpg" alt="team" />
-                        <div class="inner">
-                            <div class="info">
-                                <h5>Ayush Rai</h5>
-                                <p>
-                                    Core Committee
-                                </p>
-                                <div class="social-links">
-                                    <a href="mailto:ayushrai7666@gmail.com?subject=Enquiry about team Endeavour">
-                                        <span class="fa fa-envelope"></span>
-                                    </a>
-                                    <a href="https://www.linkedin.com/in/ayush-rai-8925b0195">
-                                        <span class="fa fa-linkedin"></span>
-                                    </a>
-                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <img src="images/ISHU SHUKRALIA.jpg" alt="team" />
-                        <div class="inner">
-                            <div class="info">
-                                <h5>Ishu Shukralia </h5>
-                                <p>Core Committee</p>
-                                <div class="social-links">
-                                    <a href="mailto:ishusukhralia786cool@gmail.com?subject=Enquiry about team Endeavour">
-                                        <span class="fa fa-envelope"></span>
-                                    </a>
-                                    <a href="https://www.linkedin.com/in/ishu-sukhralia-83b3231a0">
-                                        <span class="fa fa-linkedin"></span>
-                                    </a>
-                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="images/PRIYANKA KUMARI.jpg" alt="team" />
-                        <div class="inner">
-                            <div class="info">
-                                <h5><abbr title="Priyanka Kumari">Priyanka</abbr></h5>
-                                <p>Core Committee</p>
-                                <div class="social-links">
-                                    <a href="mailto:priyanka.ksh85@gmail.com ?subject=Enquiry about team Endeavour">
-                                        <span class="fa fa-envelope"></span>
-                                    </a>
-                                    <a href="https://www.linkedin.com/in/priyanka-kumari-4292a7229">
-                                        <span class="fa fa-linkedin"></span>
-                                    </a>
-                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="images/ASHISH KUMAR.jpg" alt="team" />
-                        <div class="inner">
-                            <div class="info">
-                                <h5>Ashish Kumar</h5>
-                                <p>Core Committee</p>
-                                <div class="social-links">
-                                    <a href="mailto:ashish1feb2001@gmail.com?subject=Enquiry about team Endeavour">
-                                        <span class="fa fa-envelope"></span>
-                                    </a>
-                                    <a href="https://www.linkedin.com/in/ashish-kumar-a268b8206">
-                                        <span class="fa fa-linkedin"></span>
-                                    </a>
-                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <img src="images/KAMALPREET KAUR.jpg" alt="team" />
-                        <div class="inner">
-                            <div class="info">
-                                <h5><abbr title="Kamalpreet Kaur">Kamalpreet</abbr></h5>
-                                <p>Core Committee</p>
-                                <div class="social-links">
-                                    <a href="mailto:kamal.toor98774@gmail.com?subject=Enquiry about team Endeavour">
-                                        <span class="fa fa-envelope"></span>
-                                    </a>
-                                    <a href="https://www.linkedin.com/in/kamalpreet-kaur-b77583163">
-                                        <span class="fa fa-linkedin"></span>
-                                    </a>
-                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="images/AYUSH KUMAR.jfif" alt="team" />
-                        <div class="inner">
-                            <div class="info">
-                                <h5> Ayush Kumar </h5>
-                                <p>Core Committee</p>
-                                <div class="social-links">
-                                    <a href="mailto:ajk2466@gmail.com ?subject=Enquiry about team Endeavour">
-                                        <span class="fa fa-envelope"></span>
-                                    </a>
-                                    <a href="www.linkedin.com/in/ayush-kumar-846973157">
-                                        <span class="fa fa-linkedin"></span>
-                                    </a>
-                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="images/NIKHIL KUMAWAT.jpg" alt="team" />
-                        <div class="inner">
-                            <div class="info">
-                                <h5>Nikhil Kumawat</h5>
-                                <p>Core Committee</p>
-                                <div class="social-links">
-                                    <a href="mailto:1940318@sliet.ac.in ?subject=Enquiry about team Endeavour">
-                                        <span class="fa fa-envelope"></span>
-                                    </a>
-                                    <a href="https://www.linkedin.com/in/nikhil-kumawat-680925212">
-                                        <span class="fa fa-linkedin"></span>
-                                    </a>
-                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="item">
                         <img src="images/Atul Ranjan.jpeg" alt="team" />
                         <div class="inner">
@@ -1266,169 +1116,451 @@
                     </div>
 
 
-                    
-                    
-                </div>
-            </div>
-    </section>
-    <!-- Committee -->
-
-    <!-- Team -->
-    <a id="members" target="_blank" rel="noopener noreferrer"></a>
-    <section class="team-section">
-        <div class="container">
-            <div class="row">
-                <div class="section-title">
-                    <h1>Members</h1>
-                    <!-- <p>core</p> -->
-                </div>
-            </div>
-            <div class="row">
-                <div class="team-items">
-                   
-                    <div class="item">
-                        <img src="images/Utsav.jpeg" alt="team" />
-                        <div class="inner">
-                            <div class="info">
-                                <h5>Utsav Anand </h5>
-                                <p>Coordinator</p>
-                                <div class="social-links">
-                                    <a href="mailto:utsavanand648@gmail.com ?subject=Enquiry about team Endeavour">
-                                        <span class="fa fa-envelope"></span>
-                                    </a>
-                                    <a href="https://www.linkedin.com/in/utsav-anand-bb4374207">
-                                        <span class="fa fa-linkedin"></span>
-                                    </a>
-                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="images/G SAI HARSH.jpeg" alt="team" />
-                        <div class="inner">
-                            <div class="info">
-                                <h5>G Sai Harsh</h5>
-                                <p>Coordinator</p>
-                                <div class="social-links">
-                                    <a href="mailto:gsaiharsh1997@gmail.com?subject=Enquiry about team Endeavour">
-                                        <span class="fa fa-envelope"></span>
-                                    </a>
-                                    <!-- <a href="#"><span class="fa fa-linkedin"></span></a> -->
-                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="images/PRASHANT SHAHI1.jpg" alt="team" />
-                        <div class="inner">
-                            <div class="info">
-                                <h5>Prashant Shahi</h5>
-                                <p>Convenor & Treasurer</p>
-                                <div class="social-links">
-                                    <a href="mailto:prashantkumarshahi50@gmail.com?subject=Enquiry about team Endeavour">
-                                        <span class="fa fa-envelope"></span>
-                                    </a>
-                                    <a href="https://www.linkedin.com/in/prashant-shahi-651a251b9">
-                                        <span class="fa fa-linkedin"></span>
-                                    </a>
-                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="images/Srinivas.jpg" alt="team" />
-                        <div class="inner">
-                            <div class="info">
-                                <h5>Srinivas Basker </h5>
-                                <p>Website & Programming Head</p>
-                                <div class="social-links">
-                                    <a href="mailto:nivasbasker@gmail.com ?subject=Enquiry about team Endeavour">
-                                        <span class="fa fa-envelope"></span>
-                                    </a>
-                                    <a href="https://www.linkedin.com/in/srinivas-basker-61313a170/">
-                                        <span class="fa fa-linkedin"></span>
-                                    </a>
-                                    <!-- <a href="#"><span class="fa fa-linkedin"></span></a> -->
-                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <img src="images/AVINASH.jpg" alt="team" />
-                        <div class="inner">
-                            <div class="info">
-                                <h5>Avinash</h5>
-                                <p>Asset Manager & Documentation</p>
-                                <div class="social-links">
-                                    <a href="mailto:avinashavi0125@gmail.com?subject=Enquiry about team Endeavour">
-                                        <span class="fa fa-envelope"></span>
-                                    </a>
-                                    <a href="https://www.linkedin.com/in/avinash-1743911b7">
-                                        <span class="fa fa-linkedin"></span>
-                                    </a>
-                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="images/SHIVAM YADAV.jpeg" alt="team" />
-                        <div class="inner">
-                            <div class="info">
-                                <h5>Shivam Yadav </h5>
-                                <p>PR Head</p>
-                                <div class="social-links">
-                                    <a href="mailto:sidsam8874@gmail.com?subject=Enquiry about team Endeavour">
-                                        <span class="fa fa-envelope"></span>
-                                    </a>
-                                    <!-- <a href="#"><span class="fa fa-linkedin"></span></a> -->
-                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="images/TUSHAR CHANDRA.jpg" alt="team" />
-                        <div class="inner">
-                            <div class="info">
-                                <h5>Tushar Chandra</h5>
-                                <p>PR Head</p>
-                                <div class="social-links">
-                                    <a href="mailto:tusharchandra197@gmail.com?subject=Enquiry about team Endeavour">
-                                        <span class="fa fa-envelope"></span>
-                                    </a>
-                                    <!-- <a href="#"><span class="fa fa-linkedin"></span></a> -->
-                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="images/20210822_100106 - Shubham Tushar.jpg" alt="team" />
-                        <div class="inner">
-                            <div class="info">
-                                <h5><abbr title="Shubham Tushar">Subham</abbr></h5>
-                                <p>HR</p>
-                                <div class="social-links">
-                                    <a href="mailto:Shubham.fashioner@gmail.com ?subject=Enquiry about team Endeavour">
-                                        <span class="fa fa-envelope"></span>
-                                    </a>
-                                    <a href="https://www.linkedin.com/in/shubham-tushar-357700201">
-                                        <span class="fa fa-linkedin"></span>
-                                    </a>
-                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
 
-                    <!-- <div class="item">
+                    <!-- Alumni -->
+                    <a id="core_committee" target="_blank" rel="noopener noreferrer"></a>
+                    <!-- Committee -->
+                    <section class="team-section">
+                        <div class="container">
+                            <div class="row">
+                                <div class="section-title">
+                                    <h1>Endeavour Committee</h1>
+                                    <!-- <p>core</p> -->
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="team-items">
+
+
+                                    <div class="item">
+                                        <img src="images/SOHAM DAS.jpeg" alt="team" />
+                                        <div class="inner">
+                                            <div class="info">
+                                                <h5> Soham Das </h5>
+                                                <p><abbr title="Coordinator">Core Committee</abbr></p>
+                                                <div class="social-links">
+                                                    <a
+                                                        href="mailto:sohamdas.in@gmail.com?subject=Enquiry about team Endeavour">
+                                                        <span class="fa fa-envelope"></span>
+                                                    </a>
+                                                    <a href="www.bit.ly/soham_linkedin"><span
+                                                            class="fa fa-linkedin"></span></a>
+                                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <img src="images/KRISHNA KUMAR.jpeg" alt="team" />
+                                            <div class="inner">
+                                                <div class="info">
+                                                    <h5>Krishna Kumar</h5>
+                                                    <p><abbr title="Coordinator">Core Committee</abbr></p>
+                                                </div>
+                                                <div class="social-links">
+                                                    <a
+                                                        href="mailto:krishnakumar3129915@gmail.com?subject=Enquiry about team Endeavour">
+                                                        <span class="fa fa-envelope"></span>
+                                                    </a>
+                                                    <a href="https://www.linkedin.com/in/krishna-kumar-8ab5a5173/">
+                                                        <span class="fa fa-linkedin"></span>
+                                                    </a>
+                                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/AASHITA SARAN.jpg" alt="team" />
+                                        <div class="inner">
+                                            <div class="info">
+                                                <h5>Aashita Saran </h5>
+                                                <p>Core Committee</p>
+                                                <div class="social-links">
+                                                    <a
+                                                        href="mailto:aashita.saran@gmail.com ?subject=Enquiry about team Endeavour">
+                                                        <span class="fa fa-envelope"></span>
+                                                    </a>
+                                                    <a href="https://www.linkedin.com/in/aashita-saran-7a62011b8">
+                                                        <span class="fa fa-linkedin"></span>
+                                                    </a>
+                                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/ABHISHEK YADAV.jpg" alt="team" />
+                                        <div class="inner">
+                                            <div class="info">
+                                                <h5>Abhishek Yadav</h5>
+                                                <p><abbr title="Convener & ICD Mentor & PR">Core Committee</abbr></p>
+                                                <div class="social-links">
+                                                    <a
+                                                        href="mailto:yadavabhiyan@gmail.com?subject=Enquiry about team Endeavour">
+                                                        <span class="fa fa-envelope"></span>
+                                                    </a>
+                                                    <a href="https://www.linkedin.com/in/abhishekyadav24">
+                                                        <span class="fa fa-linkedin"></span>
+                                                    </a>
+                                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/SATVIK RAJ PATEL.jpg" alt="team" />
+                                        <div class="inner">
+                                            <div class="info">
+                                                <h5>Satvik Raj Patel </h5>
+                                                <p>
+                                                    Core Committee
+                                                </p>
+                                                <div class="social-links">
+                                                    <a
+                                                        href="mailto:rajpatel150800@gmail.com ?subject=Enquiry about team Endeavour">
+                                                        <span class="fa fa-envelope"></span>
+                                                    </a>
+                                                    <a href="https://www.linkedin.com/in/raj-patel-957420155">
+                                                        <span class="fa fa-linkedin"></span>
+                                                    </a>
+                                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="item">
+                                        <img src="images/AYUSH RAI.jpg" alt="team" />
+                                        <div class="inner">
+                                            <div class="info">
+                                                <h5>Ayush Rai</h5>
+                                                <p>
+                                                    Core Committee
+                                                </p>
+                                                <div class="social-links">
+                                                    <a
+                                                        href="mailto:ayushrai7666@gmail.com?subject=Enquiry about team Endeavour">
+                                                        <span class="fa fa-envelope"></span>
+                                                    </a>
+                                                    <a href="https://www.linkedin.com/in/ayush-rai-8925b0195">
+                                                        <span class="fa fa-linkedin"></span>
+                                                    </a>
+                                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="images/ISHU SHUKRALIA.jpg" alt="team" />
+                                        <div class="inner">
+                                            <div class="info">
+                                                <h5>Ishu Shukralia </h5>
+                                                <p>Core Committee</p>
+                                                <div class="social-links">
+                                                    <a
+                                                        href="mailto:ishusukhralia786cool@gmail.com?subject=Enquiry about team Endeavour">
+                                                        <span class="fa fa-envelope"></span>
+                                                    </a>
+                                                    <a href="https://www.linkedin.com/in/ishu-sukhralia-83b3231a0">
+                                                        <span class="fa fa-linkedin"></span>
+                                                    </a>
+                                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/PRIYANKA KUMARI.jpg" alt="team" />
+                                        <div class="inner">
+                                            <div class="info">
+                                                <h5><abbr title="Priyanka Kumari">Priyanka</abbr></h5>
+                                                <p>Core Committee</p>
+                                                <div class="social-links">
+                                                    <a
+                                                        href="mailto:priyanka.ksh85@gmail.com ?subject=Enquiry about team Endeavour">
+                                                        <span class="fa fa-envelope"></span>
+                                                    </a>
+                                                    <a href="https://www.linkedin.com/in/priyanka-kumari-4292a7229">
+                                                        <span class="fa fa-linkedin"></span>
+                                                    </a>
+                                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/ASHISH KUMAR.jpg" alt="team" />
+                                        <div class="inner">
+                                            <div class="info">
+                                                <h5>Ashish Kumar</h5>
+                                                <p>Core Committee</p>
+                                                <div class="social-links">
+                                                    <a
+                                                        href="mailto:ashish1feb2001@gmail.com?subject=Enquiry about team Endeavour">
+                                                        <span class="fa fa-envelope"></span>
+                                                    </a>
+                                                    <a href="https://www.linkedin.com/in/ashish-kumar-a268b8206">
+                                                        <span class="fa fa-linkedin"></span>
+                                                    </a>
+                                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="images/KAMALPREET KAUR.jpg" alt="team" />
+                                        <div class="inner">
+                                            <div class="info">
+                                                <h5><abbr title="Kamalpreet Kaur">Kamalpreet</abbr></h5>
+                                                <p>Core Committee</p>
+                                                <div class="social-links">
+                                                    <a
+                                                        href="mailto:kamal.toor98774@gmail.com?subject=Enquiry about team Endeavour">
+                                                        <span class="fa fa-envelope"></span>
+                                                    </a>
+                                                    <a href="https://www.linkedin.com/in/kamalpreet-kaur-b77583163">
+                                                        <span class="fa fa-linkedin"></span>
+                                                    </a>
+                                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/AYUSH KUMAR.jfif" alt="team" />
+                                        <div class="inner">
+                                            <div class="info">
+                                                <h5> Ayush Kumar </h5>
+                                                <p>Core Committee</p>
+                                                <div class="social-links">
+                                                    <a
+                                                        href="mailto:ajk2466@gmail.com ?subject=Enquiry about team Endeavour">
+                                                        <span class="fa fa-envelope"></span>
+                                                    </a>
+                                                    <a href="www.linkedin.com/in/ayush-kumar-846973157">
+                                                        <span class="fa fa-linkedin"></span>
+                                                    </a>
+                                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/NIKHIL KUMAWAT.jpg" alt="team" />
+                                        <div class="inner">
+                                            <div class="info">
+                                                <h5>Nikhil Kumawat</h5>
+                                                <p>Core Committee</p>
+                                                <div class="social-links">
+                                                    <a
+                                                        href="mailto:1940318@sliet.ac.in ?subject=Enquiry about team Endeavour">
+                                                        <span class="fa fa-envelope"></span>
+                                                    </a>
+                                                    <a href="https://www.linkedin.com/in/nikhil-kumawat-680925212">
+                                                        <span class="fa fa-linkedin"></span>
+                                                    </a>
+                                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/Atul Ranjan.jpeg" alt="team" />
+                                        <div class="inner">
+                                            <div class="info">
+                                                <h5> Atul Ranjan </h5>
+                                                <!--Name-->
+                                                <p>Core Committee</p>
+                                                <!--Post-->
+                                                <div class="social-links">
+                                                    <a
+                                                        href="mailto:atulr2001@gmail.com?subject=Enquiry about team Endeavour">
+                                                        <span class="fa fa-envelope"></span>
+                                                    </a>
+                                                    <!--linkedin-->
+                                                    <a href=""><span class="fa fa-linkedin"></span></a>
+                                                    <!--mail-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+                                </div>
+                            </div>
+                    </section>
+                    <!-- Committee -->
+
+                    <!-- Team -->
+                    <a id="members" target="_blank" rel="noopener noreferrer"></a>
+                    <section class="team-section">
+                        <div class="container">
+                            <div class="row">
+                                <div class="section-title">
+                                    <h1>Members</h1>
+                                    <!-- <p>core</p> -->
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="team-items">
+
+                                    <div class="item">
+                                        <img src="images/Utsav.jpeg" alt="team" />
+                                        <div class="inner">
+                                            <div class="info">
+                                                <h5>Utsav Anand </h5>
+                                                <p>Coordinator</p>
+                                                <div class="social-links">
+                                                    <a
+                                                        href="mailto:utsavanand648@gmail.com ?subject=Enquiry about team Endeavour">
+                                                        <span class="fa fa-envelope"></span>
+                                                    </a>
+                                                    <a href="https://www.linkedin.com/in/utsav-anand-bb4374207">
+                                                        <span class="fa fa-linkedin"></span>
+                                                    </a>
+                                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/G SAI HARSH.jpeg" alt="team" />
+                                        <div class="inner">
+                                            <div class="info">
+                                                <h5>G Sai Harsh</h5>
+                                                <p>Coordinator</p>
+                                                <div class="social-links">
+                                                    <a
+                                                        href="mailto:gsaiharsh1997@gmail.com?subject=Enquiry about team Endeavour">
+                                                        <span class="fa fa-envelope"></span>
+                                                    </a>
+                                                    <!-- <a href="#"><span class="fa fa-linkedin"></span></a> -->
+                                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/PRASHANT SHAHI1.jpg" alt="team" />
+                                        <div class="inner">
+                                            <div class="info">
+                                                <h5>Prashant Shahi</h5>
+                                                <p>Convenor & Treasurer</p>
+                                                <div class="social-links">
+                                                    <a
+                                                        href="mailto:prashantkumarshahi50@gmail.com?subject=Enquiry about team Endeavour">
+                                                        <span class="fa fa-envelope"></span>
+                                                    </a>
+                                                    <a href="https://www.linkedin.com/in/prashant-shahi-651a251b9">
+                                                        <span class="fa fa-linkedin"></span>
+                                                    </a>
+                                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/Srinivas.jpg" alt="team" />
+                                        <div class="inner">
+                                            <div class="info">
+                                                <h5>Srinivas Basker </h5>
+                                                <p>Website & Programming Head</p>
+                                                <div class="social-links">
+                                                    <a
+                                                        href="mailto:nivasbasker@gmail.com ?subject=Enquiry about team Endeavour">
+                                                        <span class="fa fa-envelope"></span>
+                                                    </a>
+                                                    <a href="https://www.linkedin.com/in/srinivas-basker-61313a170/">
+                                                        <span class="fa fa-linkedin"></span>
+                                                    </a>
+                                                    <!-- <a href="#"><span class="fa fa-linkedin"></span></a> -->
+                                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="images/AVINASH.jpg" alt="team" />
+                                        <div class="inner">
+                                            <div class="info">
+                                                <h5>Avinash</h5>
+                                                <p>Asset Manager & Documentation</p>
+                                                <div class="social-links">
+                                                    <a
+                                                        href="mailto:avinashavi0125@gmail.com?subject=Enquiry about team Endeavour">
+                                                        <span class="fa fa-envelope"></span>
+                                                    </a>
+                                                    <a href="https://www.linkedin.com/in/avinash-1743911b7">
+                                                        <span class="fa fa-linkedin"></span>
+                                                    </a>
+                                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/SHIVAM YADAV.jpeg" alt="team" />
+                                        <div class="inner">
+                                            <div class="info">
+                                                <h5>Shivam Yadav </h5>
+                                                <p>PR Head</p>
+                                                <div class="social-links">
+                                                    <a
+                                                        href="mailto:sidsam8874@gmail.com?subject=Enquiry about team Endeavour">
+                                                        <span class="fa fa-envelope"></span>
+                                                    </a>
+                                                    <!-- <a href="#"><span class="fa fa-linkedin"></span></a> -->
+                                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/TUSHAR CHANDRA.jpg" alt="team" />
+                                        <div class="inner">
+                                            <div class="info">
+                                                <h5>Tushar Chandra</h5>
+                                                <p>PR Head</p>
+                                                <div class="social-links">
+                                                    <a
+                                                        href="mailto:tusharchandra197@gmail.com?subject=Enquiry about team Endeavour">
+                                                        <span class="fa fa-envelope"></span>
+                                                    </a>
+                                                    <!-- <a href="#"><span class="fa fa-linkedin"></span></a> -->
+                                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/20210822_100106 - Shubham Tushar.jpg" alt="team" />
+                                        <div class="inner">
+                                            <div class="info">
+                                                <h5><abbr title="Shubham Tushar">Subham</abbr></h5>
+                                                <p>HR</p>
+                                                <div class="social-links">
+                                                    <a
+                                                        href="mailto:Shubham.fashioner@gmail.com ?subject=Enquiry about team Endeavour">
+                                                        <span class="fa fa-envelope"></span>
+                                                    </a>
+                                                    <a href="https://www.linkedin.com/in/shubham-tushar-357700201">
+                                                        <span class="fa fa-linkedin"></span>
+                                                    </a>
+                                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- <div class="item">
         <img src="images/AKSHAY KUMAR.jpg" alt="team" />
         <div class="inner">
             <div class="info">
@@ -1451,13 +1583,13 @@
 
 
 
-                    
-                   
 
 
-                    
 
-                    <!-- <div class="item">
+
+
+
+                                    <!-- <div class="item">
                         <img src="images/KASHISH.jpg" alt="team" />
                         <div class="inner">
                             <div class="info">
@@ -1475,7 +1607,7 @@
                             </div>
                         </div>
                     </div> -->
-                    <!-- <div class="item">
+                                    <!-- <div class="item">
                         <img src="images/GUDDU KUMAR.jpg" alt="team" />
                         <div class="inner">
                             <div class="info">
@@ -1494,52 +1626,54 @@
                         </div>
                     </div> -->
 
-                    <div class="item">
-                        <img src="images/SUBHAM RAJ.jpg" alt="team" />
-                        <div class="inner">
-                            <div class="info">
-                                <h5>Subham Raj</h5>
-                                <p>Circuit Designing & Electronics Head</p>
-                                <div class="social-links">
-                                    <a href="mailto:2040228@sliet.ac.in?subject=Enquiry about team Endeavour">
-                                        <span class="fa fa-envelope"></span>
-                                    </a>
-                                    <a href="https://www.linkedin.com/in/subbhamraj">
-                                        <span class="fa fa-linkedin"></span>
-                                    </a>
-                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="images/ABHIGYAN PRASHAR 1.jpg" alt="team" />
-                        <div class="inner">
-                            <div class="info">
-                                <h5><abbr title="Abhigyan Prashar">Abhigyan</abbr></h5>
-                                <p>Senior Member</p>
-                                <div class="social-links">
-                                    <a href="mailto:abhigyanprashar8877933@gmail.com?subject=Enquiry about team Endeavour">
-                                        <span class="fa fa-envelope"></span>
-                                    </a>
-                                    <a href="https://www.linkedin.com/in/abhigyan-prashar-26392420a">
-                                        <span class="fa fa-linkedin"></span>
-                                    </a>
-                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    
-
-                   
+                                    <div class="item">
+                                        <img src="images/SUBHAM RAJ.jpg" alt="team" />
+                                        <div class="inner">
+                                            <div class="info">
+                                                <h5>Subham Raj</h5>
+                                                <p>Circuit Designing & Electronics Head</p>
+                                                <div class="social-links">
+                                                    <a
+                                                        href="mailto:2040228@sliet.ac.in?subject=Enquiry about team Endeavour">
+                                                        <span class="fa fa-envelope"></span>
+                                                    </a>
+                                                    <a href="https://www.linkedin.com/in/subbhamraj">
+                                                        <span class="fa fa-linkedin"></span>
+                                                    </a>
+                                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/ABHIGYAN PRASHAR 1.jpg" alt="team" />
+                                        <div class="inner">
+                                            <div class="info">
+                                                <h5><abbr title="Abhigyan Prashar">Abhigyan</abbr></h5>
+                                                <p>Senior Member</p>
+                                                <div class="social-links">
+                                                    <a
+                                                        href="mailto:abhigyanprashar8877933@gmail.com?subject=Enquiry about team Endeavour">
+                                                        <span class="fa fa-envelope"></span>
+                                                    </a>
+                                                    <a href="https://www.linkedin.com/in/abhigyan-prashar-26392420a">
+                                                        <span class="fa fa-linkedin"></span>
+                                                    </a>
+                                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
 
 
-                   
-                    <!-- <div class="item">
+
+
+
+
+
+
+                                    <!-- <div class="item">
                         <img src="images/SAMEER SUMAN.jpg" alt="team" />
                         <div class="inner">
                             <div class="info">
@@ -1560,7 +1694,7 @@
  -->
 
 
-                    <!-- <div class="item">
+                                    <!-- <div class="item">
                         <img src="images/PARTH SAINI.jpg" alt="team" />
                         <div class="inner">
                             <div class="info">
@@ -1580,302 +1714,317 @@
                     </div> -->
 
 
-                    <div class="item">
-                        <img src="images/NITISH KUMAR 1.jpg" alt="team" />
-                        <div class="inner">
-                            <div class="info">
-                                <h5>Nitish Kumar </h5>
-                                <p>Fabrication Head</p>
-                                <div class="social-links">
-                                    <a href="mailto:nitishsinghrajput1811666@gmail.com?subject=Enquiry about team Endeavour">
-                                        <span class="fa fa-envelope"></span>
-                                    </a>
-                                    <!-- <a href="#"><span class="fa fa-linkedin"></span></a> -->
-                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="images/profiles22/ANKIT KUMAR SINGH.jpeg" alt="team" />
-                        <div class="inner">
-                            <div class="info">
-                                <h5> Ankit Kumar </h5>
-                                <p>Fabrication Head</p>
-                                <div class="social-links">
-                                    <a href="mailto:2130307@gmail.com?subject=Enquiry about team Endeavour">
-                                        <span class="fa fa-envelope"></span>
-                                    </a>
-                                    <a href="https://www.linkedin.com/in/ankit-kumar-singh-41b815225">
-                                        <span class="fa fa-linkedin"></span>
-                                    </a>
-            
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                                    <div class="item">
+                                        <img src="images/NITISH KUMAR 1.jpg" alt="team" />
+                                        <div class="inner">
+                                            <div class="info">
+                                                <h5>Nitish Kumar </h5>
+                                                <p>Fabrication Head</p>
+                                                <div class="social-links">
+                                                    <a
+                                                        href="mailto:nitishsinghrajput1811666@gmail.com?subject=Enquiry about team Endeavour">
+                                                        <span class="fa fa-envelope"></span>
+                                                    </a>
+                                                    <!-- <a href="#"><span class="fa fa-linkedin"></span></a> -->
+                                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/profiles22/ANKIT KUMAR SINGH.jpeg" alt="team" />
+                                        <div class="inner">
+                                            <div class="info">
+                                                <h5> Ankit Kumar </h5>
+                                                <p>Fabrication Head</p>
+                                                <div class="social-links">
+                                                    <a
+                                                        href="mailto:2130307@gmail.com?subject=Enquiry about team Endeavour">
+                                                        <span class="fa fa-envelope"></span>
+                                                    </a>
+                                                    <a href="https://www.linkedin.com/in/ankit-kumar-singh-41b815225">
+                                                        <span class="fa fa-linkedin"></span>
+                                                    </a>
 
-                    <div class="item">
-                        <img src="images/OM RISHI.jpg" alt="team" />
-                        <div class="inner">
-                            <div class="info">
-                                <h5>Om Rishi </h5>
-                                <p>HR</p>
-                                <div class="social-links">
-                                    <a href="mailto:omrishi07@gmail.com ?subject=Enquiry about team Endeavour">
-                                        <span class="fa fa-envelope"></span>
-                                    </a>
-                                    <a href="linkedin.com/in/om-rishi-27b94b210">
-                                        <span class="fa fa-linkedin"></span>
-                                    </a>
-                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                    <div class="item">
-                        <img src="images/SALMAN AHMED 1.png" alt="team" />
-                        <div class="inner">
-                            <div class="info">
-                                <h5>Salman Ahmed </h5>
-                                <p>Mechanical Design & Analysis</p>
-                                <div class="social-links">
-                                    <a href="mailto:salmanahmednew144@gmail.com ?subject=Enquiry about team Endeavour">
-                                        <span class="fa fa-envelope"></span>
-                                    </a>
-                                    <a href="https://www.linkedin.com/in/salman-ahmed-62862720b">
-                                        <span class="fa fa-linkedin"></span>
-                                    </a>
-                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                                    <div class="item">
+                                        <img src="images/OM RISHI.jpg" alt="team" />
+                                        <div class="inner">
+                                            <div class="info">
+                                                <h5>Om Rishi </h5>
+                                                <p>HR</p>
+                                                <div class="social-links">
+                                                    <a
+                                                        href="mailto:omrishi07@gmail.com ?subject=Enquiry about team Endeavour">
+                                                        <span class="fa fa-envelope"></span>
+                                                    </a>
+                                                    <a href="linkedin.com/in/om-rishi-27b94b210">
+                                                        <span class="fa fa-linkedin"></span>
+                                                    </a>
+                                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
 
-                    
-
-                 
-                    
+                                    <div class="item">
+                                        <img src="images/SALMAN AHMED 1.png" alt="team" />
+                                        <div class="inner">
+                                            <div class="info">
+                                                <h5>Salman Ahmed </h5>
+                                                <p>Mechanical Design & Analysis</p>
+                                                <div class="social-links">
+                                                    <a
+                                                        href="mailto:salmanahmednew144@gmail.com ?subject=Enquiry about team Endeavour">
+                                                        <span class="fa fa-envelope"></span>
+                                                    </a>
+                                                    <a href="https://www.linkedin.com/in/salman-ahmed-62862720b">
+                                                        <span class="fa fa-linkedin"></span>
+                                                    </a>
+                                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
 
 
-                    <!--   //////////////////////     juniors  2022 recruits     /////////////////////////-->
 
 
-                   
-                    <div class="item">
-                        <img src="images/profiles22/Naman Kulshresth.jpg" alt="team" />
-                        <div class="inner">
-                            <div class="info">
-                                <h5> Naman Kulshreshth </h5>
-                                <p>Executive Member</p>
-                                <div class="social-links">
-                                    <a href="mailto:2140101@gmail.com?subject=Enquiry about team Endeavour">
-                                        <span class="fa fa-envelope"></span>
-                                    </a>
-                                    <a href="https://www.linkedin.com/in/naman-kulshresth-306285226">
-                                        <span class="fa fa-linkedin"></span>
-                                    </a>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                   
-                    <div class="item">
-                        <img src="images/Aarushi1.jpg" alt="team" />
-                        <div class="inner">
-                            <div class="info">
-                                <h5> Aarushi jain </h5>
-                                <p>Executive Member</p>
-                                <div class="social-links">
-                                    <a href="mailto:2140210@gmail.com?subject=Enquiry about team Endeavour">
-                                        <span class="fa fa-envelope"></span>
-                                    </a>
-                                    <a href="https://www.linkedin.com/in/aarushi-jain-511353230">
-                                        <span class="fa fa-linkedin"></span>
-                                    </a>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="images/profiles22/Chandra Prakash.jpg" alt="team" />
-                        <div class="inner">
-                            <div class="info">
-                                <h5> Chandra Prakash </h5>
-                                <p>Executive Member</p>
-                                <div class="social-links">
-                                    <a href="mailto:2140147@gmail.com?subject=Enquiry about team Endeavour">
-                                        <span class="fa fa-envelope"></span>
-                                    </a>
-                                    <a href="http://www.linkedin.com/in/chandra-prakash-b22783228">
-                                        <span class="fa fa-linkedin"></span>
-                                    </a>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="images/profiles22/PRANJALI SRIVASTAVA.jpeg" alt="profile photo" />
-                        <div class="inner">
-                            <div class="info">
-                                <h5> Pranjali</h5>
-                                <p>Executive Member</p>
-                                <div class="social-links">
-                                    <a href="mailto:2140201@gmail.com?subject=Enquiry about team Endeavour">
-                                        <span class="fa fa-envelope"></span>
-                                    </a>
-                                    <a href="https://www.linkedin.com/in/pranjali-srivastava-66b1ab233">
-                                        <span class="fa fa-linkedin"></span>
-                                    </a>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                   
-                    <div class="item">
-                        <img src="images/profiles22/RAVI RANJAN.jpg" alt="team" />
-                        <div class="inner">
-                            <div class="info">
-                                <h5> Ravi Ranjan </h5>
-                                <p>Executive Member</p>
-                                <div class="social-links">
-                                    <a href="mailto:2140131@gmail.com?subject=Enquiry about team Endeavour">
-                                        <span class="fa fa-envelope"></span>
-                                    </a>
-                                    <a href="http://www.linkedin.com/in/ravi2003">
-                                        <span class="fa fa-linkedin"></span>
-                                    </a>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="images/INDRA KUMAR 1.jpg" alt="team" />
-                        <div class="inner">
-                            <div class="info">
-                                <h5>Indra Kumar</h5>
-                                <p>Executive Member</p>
-                                <div class="social-links">
-                                    <a href="mailto:nishupanchal466@gmail.com?subject=Enquiry about team Endeavour">
-                                        <span class="fa fa-envelope"></span>
-                                    </a>
-                                    <a href="https://www.linkedin.com/in/indra-kumar-90326a212">
-                                        <span class="fa fa-linkedin"></span>
-                                    </a>
-                                    <!-- <a href="#"><span class="fa fa-linkedin"></span></a> -->
-                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="item">
-                        <img src="images/Sudhanshu Kumar 1.jpg" alt="team" />
-                        <div class="inner">
-                            <div class="info">
-                                <h5> Sudhanshu Gupta </h5>
-                                <p>Executive Member</p>
-                                <div class="social-links">
-                                    <a href="mailto:sudhanshugrd75@gmail.com?subject=Enquiry about team Endeavour">
-                                        <span class="fa fa-envelope"></span>
-                                    </a>
-                                    <a href="https://www.linkedin.com/in/sudhanshu-kumar-908288228">
-                                        <span class="fa fa-linkedin"></span>
-                                    </a>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
 
-                    <div class="item">
-                        <img src="images/profiles22/Rudra Gandhi.jpeg" alt="team" />
-                        <div class="inner">
-                            <div class="info">
-                                <h5> Rudra Gandhi </h5>
-                                <p>Executive Member</p>
-                                <div class="social-links">
-                                    <a href="mailto:2140107@gmail.com?subject=Enquiry about team Endeavour">
-                                        <span class="fa fa-envelope"></span>
-                                    </a>
-                                    <a href="https://www.linkedin.com/in/rudra-gandhi-0a4205241/">
-                                        <span class="fa fa-linkedin"></span>
-                                    </a>
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                   
-                    <div class="item">
-                        <img src="images/profiles22/Neharika Puri.jpg" alt="team" />
-                        <div class="inner">
-                            <div class="info">
-                                <h5> Neharika Puri </h5>
-                                <p>Executive Member</p>
-                                <div class="social-links">
-                                    <a href="mailto:2140010@gmail.com?subject=Enquiry about team Endeavour">
-                                        <span class="fa fa-envelope"></span>
-                                    </a>
-                                    <a href="https://www.linkedin.com/in/neharika-puri-2b2168218">
-                                        <span class="fa fa-linkedin"></span>
-                                    </a>
+                                    <!--   //////////////////////     juniors  2022 recruits     /////////////////////////-->
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="images/profiles22/salok Kumar.jpg" alt="team" />
-                        <div class="inner">
-                            <div class="info">
-                                <h5> Alok Kumar </h5>
-                                <p>Executive Member</p>
-                                <div class="social-links">
-                                    <a href="mailto:2140215@gmail.com?subject=Enquiry about team Endeavour">
-                                        <span class="fa fa-envelope"></span>
-                                    </a>
-                                    <a href="https://www.linkedin.com/in//">
-                                        <span class="fa fa-linkedin"></span>
-                                    </a>
 
-                                </div>
-                            </div>
-                        </div>
-                    </div> 
 
-                    <div class="item">
-                        <img src="images/profiles22/MOUSUM SARMAH.jpg" alt="team" />
-                        <div class="inner">
-                            <div class="info">
-                                <h5> Mousam Sarmah </h5>
-                                <p>Executive Member</p>
-                                <div class="social-links">
-                                    <a href="mailto:2140361@gmail.com?subject=Enquiry about team Endeavour">
-                                        <span class="fa fa-envelope"></span>
-                                    </a>
-                                    <a href="https://www.linkedin.com/in/mousum-sarmah-b98a51234">
-                                        <span class="fa fa-linkedin"></span>
-                                    </a>
+                                    <div class="item">
+                                        <img src="images/profiles22/Naman Kulshresth.jpg" alt="team" />
+                                        <div class="inner">
+                                            <div class="info">
+                                                <h5> Naman Kulshreshth </h5>
+                                                <p>Executive Member</p>
+                                                <div class="social-links">
+                                                    <a
+                                                        href="mailto:2140101@gmail.com?subject=Enquiry about team Endeavour">
+                                                        <span class="fa fa-envelope"></span>
+                                                    </a>
+                                                    <a href="https://www.linkedin.com/in/naman-kulshresth-306285226">
+                                                        <span class="fa fa-linkedin"></span>
+                                                    </a>
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                   
-<!--                     <div class="item">
+                                    <div class="item">
+                                        <img src="images/Aarushi1.jpg" alt="team" />
+                                        <div class="inner">
+                                            <div class="info">
+                                                <h5> Aarushi jain </h5>
+                                                <p>Executive Member</p>
+                                                <div class="social-links">
+                                                    <a
+                                                        href="mailto:2140210@gmail.com?subject=Enquiry about team Endeavour">
+                                                        <span class="fa fa-envelope"></span>
+                                                    </a>
+                                                    <a href="https://www.linkedin.com/in/aarushi-jain-511353230">
+                                                        <span class="fa fa-linkedin"></span>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/profiles22/Chandra Prakash.jpg" alt="team" />
+                                        <div class="inner">
+                                            <div class="info">
+                                                <h5> Chandra Prakash </h5>
+                                                <p>Executive Member</p>
+                                                <div class="social-links">
+                                                    <a
+                                                        href="mailto:2140147@gmail.com?subject=Enquiry about team Endeavour">
+                                                        <span class="fa fa-envelope"></span>
+                                                    </a>
+                                                    <a href="http://www.linkedin.com/in/chandra-prakash-b22783228">
+                                                        <span class="fa fa-linkedin"></span>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/profiles22/PRANJALI SRIVASTAVA.jpeg" alt="profile photo" />
+                                        <div class="inner">
+                                            <div class="info">
+                                                <h5> Pranjali</h5>
+                                                <p>Executive Member</p>
+                                                <div class="social-links">
+                                                    <a
+                                                        href="mailto:2140201@gmail.com?subject=Enquiry about team Endeavour">
+                                                        <span class="fa fa-envelope"></span>
+                                                    </a>
+                                                    <a href="https://www.linkedin.com/in/pranjali-srivastava-66b1ab233">
+                                                        <span class="fa fa-linkedin"></span>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="images/profiles22/RAVI RANJAN.jpg" alt="team" />
+                                        <div class="inner">
+                                            <div class="info">
+                                                <h5> Ravi Ranjan </h5>
+                                                <p>Executive Member</p>
+                                                <div class="social-links">
+                                                    <a
+                                                        href="mailto:2140131@gmail.com?subject=Enquiry about team Endeavour">
+                                                        <span class="fa fa-envelope"></span>
+                                                    </a>
+                                                    <a href="http://www.linkedin.com/in/ravi2003">
+                                                        <span class="fa fa-linkedin"></span>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/INDRA KUMAR 1.jpg" alt="team" />
+                                        <div class="inner">
+                                            <div class="info">
+                                                <h5>Indra Kumar</h5>
+                                                <p>Executive Member</p>
+                                                <div class="social-links">
+                                                    <a
+                                                        href="mailto:nishupanchal466@gmail.com?subject=Enquiry about team Endeavour">
+                                                        <span class="fa fa-envelope"></span>
+                                                    </a>
+                                                    <a href="https://www.linkedin.com/in/indra-kumar-90326a212">
+                                                        <span class="fa fa-linkedin"></span>
+                                                    </a>
+                                                    <!-- <a href="#"><span class="fa fa-linkedin"></span></a> -->
+                                                    <!-- <a href=""><span class="fa fa-youtube"></span></a> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="images/Sudhanshu Kumar 1.jpg" alt="team" />
+                                        <div class="inner">
+                                            <div class="info">
+                                                <h5> Sudhanshu Gupta </h5>
+                                                <p>Executive Member</p>
+                                                <div class="social-links">
+                                                    <a
+                                                        href="mailto:sudhanshugrd75@gmail.com?subject=Enquiry about team Endeavour">
+                                                        <span class="fa fa-envelope"></span>
+                                                    </a>
+                                                    <a href="https://www.linkedin.com/in/sudhanshu-kumar-908288228">
+                                                        <span class="fa fa-linkedin"></span>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="item">
+                                        <img src="images/profiles22/Rudra Gandhi.jpeg" alt="team" />
+                                        <div class="inner">
+                                            <div class="info">
+                                                <h5> Rudra Gandhi </h5>
+                                                <p>Executive Member</p>
+                                                <div class="social-links">
+                                                    <a
+                                                        href="mailto:2140107@gmail.com?subject=Enquiry about team Endeavour">
+                                                        <span class="fa fa-envelope"></span>
+                                                    </a>
+                                                    <a href="https://www.linkedin.com/in/rudra-gandhi-0a4205241/">
+                                                        <span class="fa fa-linkedin"></span>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="item">
+                                        <img src="images/profiles22/Neharika Puri.jpg" alt="team" />
+                                        <div class="inner">
+                                            <div class="info">
+                                                <h5> Neharika Puri </h5>
+                                                <p>Executive Member</p>
+                                                <div class="social-links">
+                                                    <a
+                                                        href="mailto:2140010@gmail.com?subject=Enquiry about team Endeavour">
+                                                        <span class="fa fa-envelope"></span>
+                                                    </a>
+                                                    <a href="https://www.linkedin.com/in/neharika-puri-2b2168218">
+                                                        <span class="fa fa-linkedin"></span>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/profiles22/salok Kumar.jpg" alt="team" />
+                                        <div class="inner">
+                                            <div class="info">
+                                                <h5> Alok Kumar </h5>
+                                                <p>Executive Member</p>
+                                                <div class="social-links">
+                                                    <a
+                                                        href="mailto:2140215@gmail.com?subject=Enquiry about team Endeavour">
+                                                        <span class="fa fa-envelope"></span>
+                                                    </a>
+                                                    <a href="https://www.linkedin.com/in//">
+                                                        <span class="fa fa-linkedin"></span>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="images/profiles22/MOUSUM SARMAH.jpg" alt="team" />
+                                        <div class="inner">
+                                            <div class="info">
+                                                <h5> Mousam Sarmah </h5>
+                                                <p>Executive Member</p>
+                                                <div class="social-links">
+                                                    <a
+                                                        href="mailto:2140361@gmail.com?subject=Enquiry about team Endeavour">
+                                                        <span class="fa fa-envelope"></span>
+                                                    </a>
+                                                    <a href="https://www.linkedin.com/in/mousum-sarmah-b98a51234">
+                                                        <span class="fa fa-linkedin"></span>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!--                     <div class="item">
                         <img src="images/profiles22/Sai Jagannath.jpg" alt="team" />
                         <div class="inner">
                             <div class="info">
@@ -1893,34 +2042,35 @@
                             </div>
                         </div>
                     </div> -->
-                    
-                   
 
-                    
 
-                   
 
-                    <div class="item">
-                        <img src="images/profiles22/AMAN KUMAR.jpg" alt="team" />
-                        <div class="inner">
-                            <div class="info">
-                                <h5> Aman Kumar </h5>
-                                <p>Executive Member</p>
-                                <div class="social-links">
-                                    <a href="mailto:2140324@gmail.com?subject=Enquiry about team Endeavour">
-                                        <span class="fa fa-envelope"></span>
-                                    </a>
-                                    <a href="https://www.linkedin.com/in/aman-kumar-087463243">
-                                        <span class="fa fa-linkedin"></span>
-                                    </a>
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                   
-                    <!-- <div class="item">
+
+
+                                    <div class="item">
+                                        <img src="images/profiles22/AMAN KUMAR.jpg" alt="team" />
+                                        <div class="inner">
+                                            <div class="info">
+                                                <h5> Aman Kumar </h5>
+                                                <p>Executive Member</p>
+                                                <div class="social-links">
+                                                    <a
+                                                        href="mailto:2140324@gmail.com?subject=Enquiry about team Endeavour">
+                                                        <span class="fa fa-envelope"></span>
+                                                    </a>
+                                                    <a href="https://www.linkedin.com/in/aman-kumar-087463243">
+                                                        <span class="fa fa-linkedin"></span>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- <div class="item">
                         <img src="images/profiles22/GAGAN GAUR.jpg" alt="team" />
                         <div class="inner">
                             <div class="info">
@@ -1939,7 +2089,7 @@
                         </div>
                     </div> -->
 
-                    <!-- <div class="item">
+                                    <!-- <div class="item">
                         <img src="images/profiles22/Nishu Panchal.jpg" alt="team" />
                         <div class="inner">
                             <div class="info">
@@ -1958,62 +2108,65 @@
                         </div>
                     </div> -->
 
-                    <div class="item">
-                        <img src="images/profiles22/Shreya Sinha.jpg" alt="team" />
-                        <div class="inner">
-                            <div class="info">
-                                <h5> Shreya Sinha </h5>
-                                <p>Executive Member</p>
-                                <div class="social-links">
-                                    <a href="mailto:shreyasapnasigma@gmail.com?subject=Enquiry about team Endeavour">
-                                        <span class="fa fa-envelope"></span>
-                                    </a>
-                                    <a href="https://www.linkedin.com/in//">
-                                        <span class="fa fa-linkedin"></span>
-                                    </a>
+                                    <div class="item">
+                                        <img src="images/profiles22/Shreya Sinha.jpg" alt="team" />
+                                        <div class="inner">
+                                            <div class="info">
+                                                <h5> Shreya Sinha </h5>
+                                                <p>Executive Member</p>
+                                                <div class="social-links">
+                                                    <a
+                                                        href="mailto:shreyasapnasigma@gmail.com?subject=Enquiry about team Endeavour">
+                                                        <span class="fa fa-envelope"></span>
+                                                    </a>
+                                                    <a href="https://www.linkedin.com/in//">
+                                                        <span class="fa fa-linkedin"></span>
+                                                    </a>
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="images/Shristy.jpg" alt="team" />
-                        <div class="inner">
-                            <div class="info">
-                                <h5> Shristy </h5>
-                                <p>Executive Member</p>
-                                <div class="social-links">
-                                    <a href="mailto:2140147@gmail.com?subject=Enquiry about team Endeavour">
-                                        <span class="fa fa-envelope"></span>
-                                    </a>
-                                    <a href="http://www.linkedin.com/in/chandra-prakash-b22783228">
-                                        <span class="fa fa-linkedin"></span>
-                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/Shristy.jpg" alt="team" />
+                                        <div class="inner">
+                                            <div class="info">
+                                                <h5> Shristy </h5>
+                                                <p>Executive Member</p>
+                                                <div class="social-links">
+                                                    <a
+                                                        href="mailto:2140147@gmail.com?subject=Enquiry about team Endeavour">
+                                                        <span class="fa fa-envelope"></span>
+                                                    </a>
+                                                    <a href="http://www.linkedin.com/in/chandra-prakash-b22783228">
+                                                        <span class="fa fa-linkedin"></span>
+                                                    </a>
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="images/Pragya.jpg" alt="team" />
-                        <div class="inner">
-                            <div class="info">
-                                <h5> Pragya  </h5>
-                                <p>Executive Member</p>
-                                <div class="social-links">
-                                    <a href="mailto:2140147@gmail.com?subject=Enquiry about team Endeavour">
-                                        <span class="fa fa-envelope"></span>
-                                    </a>
-                                    <a href="http://www.linkedin.com/in/chandra-prakash-b22783228">
-                                        <span class="fa fa-linkedin"></span>
-                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/Pragya.jpg" alt="team" />
+                                        <div class="inner">
+                                            <div class="info">
+                                                <h5> Pragya </h5>
+                                                <p>Executive Member</p>
+                                                <div class="social-links">
+                                                    <a
+                                                        href="mailto:2140147@gmail.com?subject=Enquiry about team Endeavour">
+                                                        <span class="fa fa-envelope"></span>
+                                                    </a>
+                                                    <a href="http://www.linkedin.com/in/chandra-prakash-b22783228">
+                                                        <span class="fa fa-linkedin"></span>
+                                                    </a>
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                    <!-- <div class="item">
+                                    <!-- <div class="item">
                         <img src="images/profiles22/Anuj Dubry.jpg" alt="team" />
                         <div class="inner">
                             <div class="info">
@@ -2032,81 +2185,88 @@
                         </div>
                     </div>  -->
 
-               
 
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Team -->
 
-    <!-- ********** FOOTER ********** -->
-    <section class="footer">
-        <div class="connectionFooter flex-center">
-            <div class="connectionFooterOne flex-center">
-                <div class="endeavourLogoFooter flex-column-center"><img src="./images/logoSlietWhite.png" alt=""><img src="./images/footerLogo.png" alt="Endeavour-Logo" srcset=""></div>
-            </div>
-            <div class="connectionFooterTwo">
-            <!-- 1 -->
-            <div class="footerMainText">
-                <!-- 1.1 -->
-                ENDEAVOUR
-            </div>
-            <div class="footerTagText">
-                <!-- 1.2 -->
-                Strive to Create Difference
-            </div>
-            <div class="footerSocialIcons">
-                <!-- 1.3 -->
-                <a href="https://www.facebook.com/endeavoursliet"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/endeavoursliet/"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/company/endeavoursliet/"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:endeavourinsliet@gmail.com"><i class="far fa-envelope"></i></a>
-            </div>
-        </div>
-        </div>
-        <div class="menuFooter">
-            <!-- 2 -->
-            <table class="menuFooterContainer">
-                <tr>
-                    <th>Our Team</th>
-                    <th>Our Works</th>
-                    <th></th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <td><a href="./about.html#aboutTeam">About Us</a></td>
-                    <td><a href="./projects.html#UAVs">UAVs</a></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td><a href="./about.html#ourHistory">Our History</a></td>
-                    <td><a href="./projects01.html#UGVs">UGVs</a></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td><a href="./teams.html#ourTeam">Meet The Team</a></td>
-                    <td><a href="./research.html#research">Projects</a></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </table>
-            <div class="contactContainer">
-                <p><i class="fas fa-id-badge"></i> &nbsp Ustav Anand &#58 <a href="tel:+917654323762">+91 8968343016</a></p> 
-                <br />
-                <p><i class="fas fa-id-badge"></i> &nbsp G Sai Harsh &#58 <a href="tel:+919740734156">+91 8085692977</a></p>
-            </div>
-        </div>
-    </section>
-    <!-- ********** FOOTER ********** -->
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Team -->
+
+                    <!-- ********** FOOTER ********** -->
+                    <section class="footer">
+                        <div class="connectionFooter flex-center">
+                            <div class="connectionFooterOne flex-center">
+                                <div class="endeavourLogoFooter flex-column-center"><img
+                                        src="./images/logoSlietWhite.png" alt=""><img src="./images/footerLogo.png"
+                                        alt="Endeavour-Logo" srcset=""></div>
+                            </div>
+                            <div class="connectionFooterTwo">
+                                <!-- 1 -->
+                                <div class="footerMainText">
+                                    <!-- 1.1 -->
+                                    ENDEAVOUR
+                                </div>
+                                <div class="footerTagText">
+                                    <!-- 1.2 -->
+                                    Strive to Create Difference
+                                </div>
+                                <div class="footerSocialIcons">
+                                    <!-- 1.3 -->
+                                    <a href="https://www.facebook.com/endeavoursliet"><i
+                                            class="fab fa-facebook-f"></i></a>
+                                    <a href="https://www.instagram.com/endeavoursliet/"><i
+                                            class="fab fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/company/endeavoursliet/"><i
+                                            class="fab fa-linkedin"></i></a>
+                                    <a href="mailto:endeavour@sliet.ac.in.com"><i class="far fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menuFooter">
+                            <!-- 2 -->
+                            <table class="menuFooterContainer">
+                                <tr>
+                                    <th>Our Team</th>
+                                    <th>Our Works</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <td><a href="./about.html#aboutTeam">About Us</a></td>
+                                    <td><a href="./projects.html#UAVs">UAVs</a></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="./about.html#ourHistory">Our History</a></td>
+                                    <td><a href="./projects01.html#UGVs">UGVs</a></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="./teams.html#ourTeam">Meet The Team</a></td>
+                                    <td><a href="./research.html#research">Projects</a></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                            <div class="contactContainer">
+                                <p><i class="fas fa-id-badge"></i> &nbsp Ustav Anand &#58 <a
+                                        href="tel:+917654323762">+91 8968343016</a></p>
+                                <br />
+                                <p><i class="fas fa-id-badge"></i> &nbsp G Sai Harsh &#58 <a
+                                        href="tel:+919740734156">+91 8085692977</a></p>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- ********** FOOTER ********** -->
 </body>
 
 </html>

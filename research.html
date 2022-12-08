@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="./css/cssProjects.css">
     <link rel="stylesheet" href="./css/style.css"> 
-
+    <link rel="stylesheet" href="./css/front.css"> 
     <style>
         .raceDroneImage{
     background:url(./images/ag.jpg);
@@ -38,7 +38,51 @@
 </head>
 <body>
 <!-- TOP NAVIGATION -->
-<nav class="topNav">
+
+<!-- TOP NAVIGATION -->
+<div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+    <script>window.onload = function () {
+            Particles.init({
+                selector: ".background"
+            });
+        };
+        const particles = Particles.init({
+            selector: ".background",
+            color: ["#03dac6", "#ff0266", "#000000"],
+            connectParticles: true,
+            responsive: [
+                {
+                    breakpoint: 100,
+                    options: {
+                        color: ["#faebd7", "#03dac6", "#ff0266"],
+                        maxParticles: 500,
+                        connectParticles: true
+                    }
+                }
+            ]
+        });
+      // }
+    </script>
+    <section class="nav">
+        <h1>ENDEAVOUR</h1>
+        <h3 class="span loader"><span class="m">S</span><span class="m">T</span><span class="m">R</span><span
+                class="m">I</span><span class="m">V</span><span class="m">E</span>&nbsp;<span
+                class="m">T</span><span class="m">O</span&nbsp;><span class="m">&nbsp;</span><span
+                    class="m">C</span><span class="m">R</span><span class="m"></span><span class="m">E</span><span
+                    class="m">A</span><span class="m">T</span><span class="m">E</span>&nbsp;<span
+                    class="m">D</span><span class="m">I</span><span class="m">F</span><span class="m">F</span><span
+                    class="m">E</span><span class="m">R</span><span class="m">E</span><span class="m">N</span><span
+                    class="m">C</span><span class="m">E</span></h3>
+    </section>
+
+    <canvas class="background"></canvas>
+
+
+
+</div>
+<nav class="topNav" id="navSticky">
     <div class="emptySpace25">
         <div class="endeavourLogo"><a href="./index.html#home"><img src="./images/mainlogo.png" alt="Endeavour-Logo" srcset=""></a></div>
     </div>
@@ -53,13 +97,11 @@
         <div class="endeavourLogo"><a href="http://sliet.ac.in/" target="_blank" rel="noopener noreferrer"><img src="./images/SLIET_in_Colours_of_ENDEAVOUR.png" alt="Endeavour-Logo" srcset=""></a></div>
     </div>
 </nav>
-<!-- TOP NAVIGATION -->
-
 <!-- INTRODUCTION -->
-    <section class="intro">
+    <!-- <section class="intro">
         <p class="endeavourText">Endeavour</p>
         <p class="endeavourTagline">Strive to create difference</p>
-    </section>
+    </section> -->
 <!-- INTRODUCTION -->
 <a id="research" id="research" target="_blank" rel="noopener noreferrer"></a>
 <!-- BLOG -->
