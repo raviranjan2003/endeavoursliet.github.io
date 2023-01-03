@@ -1,9 +1,5 @@
 
-@font-face {
-  font-family: Mandatory Plaything;
 
-  src: url(../fonts/PLAYTHING/MP.ttf);
-}
 
 
 
@@ -16,10 +12,6 @@
   body {
     font-family: "ROBOTO", sans-serif;
   }
-
-    
-  
-    
   .nav,
   .slider {
     display: flex;
@@ -28,60 +20,63 @@
     align-items: center;
     height: 100vh;
     position: relative;
-    background-color: #1e1f26;
+    background-color: #ffffff;
     text-align: center;
     padding: 0 2em;
   }
-  
+  /* ENDEAVOUR */
   .nav h1,
   .slider h1 {
-    font-family: Mandatory Plaything, sans-serif;
-    font-size: 1vm;
+    font-family: "Mandatory Plaything", sans-serif;
+    font-size: 18vh;
     margin: 0;
     padding-bottom: 0.5rem;
     letter-spacing: 0.5rem;
-    color: #ff0266;
+    color: #a40505;
+
     transition: all 0.3s ease;
-    z-index: 3;
+    z-index: 1;
   }
   h1:hover {
     transform: translate3d(0, -10px, 22px);
-    color: #ff0266;
+    color: #a40505;
   }
   
 
+
+  /* FOR STRIVE  */
   h3.span {
-    font-size: 2vw;
-    letter-spacing: 0.7em;
+    font-size: 2.2vw;
+    letter-spacing: 0.1em;
     font-family: "ROBOTO", sans-serif;
-    font-weight: 300;
-    color: #FCF6F5FF;
+    font-weight: 900;
+    color: #a40505;
     z-index: 4;
   }
   span:hover {
-    color: #ff0266;
-    font-weight: 500;
-    font-size: 2.2vw;
+    color:rgb(176, 7, 7);
+    font-weight: 900;
+    font-size: 2.5vw;
   }
   
   a {
     text-decoration: none;
   }
   
-  
+  /* FOR JS PARTILE PACKGROUND */
   .background {
     position: absolute;
-    height: 90vh;
+    height: 50px;
     top: 0;
-    bottom: 0;
+    bottom:50px;
     left: 0;
     right: 0;
     z-index: auto;
   }
-  @media (min-width: 80px) {
+  /* @media (min-width: 80px) {
     .nav h1,
     .slider h1 {
-      font-size: 10vw;
+      font-size: 15vw;
     }
   
     .nav h2,
@@ -92,12 +87,13 @@
     .nav-tab {
       font-size: 3vw;
     }
-  }
+  } */
   
-  @media screen only (min-width: 360px) {
+  @media (max-width: 600px) {
     .nav h1,
     .slider h1 {
-      font-size: 8vw;
+      font-size: 10vw;
+      color: #a40505;
     }
   
     .nav h2,
@@ -112,23 +108,36 @@
   }
   .background {
     position: absolute;
-    height: 100vh;
+    height: 5px;
     top: 0;
-    bottom: 0;
+    bottom: 50px;;
     left: 0;
     right: 0;
-    z-index: 0;
+    z-index:0;
+  
+
+
   }
+
+
+
+
+
+
+
+
+
+
   .loader span {
-    color: #faebd7;
-    text-shadow: 0 0 0 #faebd7;
+    color: #a12323;
+    text-shadow: 0 0 0 #a12323;
     -webkit-animation: loading 1s ease-in-out infinite alternate;
   }
   
   @-webkit-keyframes loading {
     to {
-      text-shadow: 20px 0 70px #ff0266;
-      color: #ff0266;
+      text-shadow: 50px 0 90px #a40505;
+      color: #a40505;
     }
   }
   .loader span:nth-child(2) {

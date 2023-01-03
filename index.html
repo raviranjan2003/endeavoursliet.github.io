@@ -85,15 +85,15 @@
             };
             const particles = Particles.init({
                 selector: ".background",
-                color: ["#03dac6", "#ff0266", "#000000"],
+                color: ["#a40505", "#ff0000", "#000000",],
                 connectParticles: true,
                 responsive: [
-                    {
-                        breakpoint: 100,
-                        options: {
-                            color: ["#faebd7", "#03dac6", "#ff0266"],
-                            maxParticles: 500,
-                            connectParticles: true
+                {
+                    breakpoint: 768,
+                    options: {
+              color: ["#ff0000", "#a40505", "#000000"],
+              maxParticles: 43,
+              connectParticles: true
                         }
                     }
                 ]
@@ -102,14 +102,31 @@
         </script>
         <section class="nav">
             <h1>ENDEAVOUR</h1>
-            <h3 class="span loader"><span class="m">S</span><span class="m">T</span><span class="m">R</span><span
-                    class="m">I</span><span class="m">V</span><span class="m">E</span>&nbsp;<span
-                    class="m">T</span><span class="m">O</span&nbsp;><span class="m">&nbsp;</span><span
-                        class="m">C</span><span class="m">R</span><span class="m"></span><span class="m">E</span><span
-                        class="m">A</span><span class="m">T</span><span class="m">E</span>&nbsp;<span
-                        class="m">D</span><span class="m">I</span><span class="m">F</span><span class="m">F</span><span
-                        class="m">E</span><span class="m">R</span><span class="m">E</span><span class="m">N</span><span
-                        class="m">C</span><span class="m">E</span></h3>
+            <h3 class="span loader">
+                <span class="m">S</span>
+                <span class="m">T</span>
+                <span class="m">R</span>
+                <span class="m">I</span>
+                <span class="m">V</span>
+                <span class="m">E</span>&nbsp;
+                <span class="m">T</span>
+                <span class="m">O</span>&nbsp;
+                <span class="m">C</span>
+                <span class="m">R</span>
+                <span class="m">E</span>
+                <span class="m">A</span>
+                <span class="m">T</span>
+                <span class="m">E</span>&nbsp;
+                <span class="m">D</span>
+                <span class="m">I</span>
+                <span class="m">F</span>
+                <span class="m">F</span>
+                <span class="m">E</span>
+                <span class="m">R</span>
+                <span class="m">E</span>
+                <span class="m">N</span>
+                <span class="m">C</span>
+                <span class="m">E</span></h3>
         </section>
 
         <canvas class="background"></canvas>
