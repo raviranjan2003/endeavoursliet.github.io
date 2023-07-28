@@ -232,8 +232,53 @@
   margin-bottom: 100px;
   font-size: 16px;
 }
+.activity{
+  margin-top: 1%;
+  color:#cd0000;
+  text-align: center;
+  margin-bottom: 1%;
 
+}
+.actuvityflex{
+  display: flex;
 
+  background-color: #ffffff;
+}
+.a1about{
+  width:30vw;
+  height:45vh;
+  background-color: aqua; 
+  border: 5px solid black;
+  margin-left:2.5%;
+}
+.a22about{
+  width:30vw;
+  height:45vh;
+  background-color: aqua; 
+  border: 5px solid black;
+  margin-top:2.5%;
+  margin-bottom: 2.5%;
+}
+.a2about{
+
+  margin-left:18.35%;
+ 
+}
+.a3about{
+
+  margin-left:2.5%;
+
+}
+#a9about{
+  width:30vw;
+  height:45vh;
+  background-color: rgb(255, 0, 47); 
+  border: 5px solid black;
+  margin-left:2.5%;
+}
+.displaynone{
+  
+}
 /* FOOTER SECTION */
 
 
