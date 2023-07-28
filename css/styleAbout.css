@@ -110,7 +110,7 @@
   margin: 0 auto;
   border-radius: 2px  15px 2px 15px;
   text-align: center;
-  color: white;
+  /* color: white; */
   display: flex;
 }
 .chapter h3{
@@ -160,7 +160,7 @@
 }
 .points .write {
   width: 85%;
-  background-color: #F0CDCD;
+  background-color: #F7D9D9;
   padding: 10px;
   border-radius: 10px;
   margin: 0 20px;
