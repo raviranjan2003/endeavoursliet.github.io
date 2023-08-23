@@ -200,7 +200,7 @@
       </div>
     </div>
   </body>
-  <script type="module">
+  <!-- <script type="module">
             import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js'
             import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-storage.js"
             import { getDatabase, set, ref as dbRef } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js"
@@ -219,6 +219,11 @@
     const root = getDatabase();
     let uid= Date.now();
 
+
+
+
+
+    
     function writeUserData(_name, mail, _contact,_reg,_ten,_twelve,_why,_prog,_year,_trade) {
                 set(dbRef(root, 'registrations/' + uid), {
                     name: _name,
@@ -272,5 +277,7 @@
                  }
                 
             });
-  </script>
-</html>
+  </script> -->
+
+
+  </html>

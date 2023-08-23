@@ -101,7 +101,7 @@
           right place! To all the passionate and enthusiastic learners,<br />
           Endeavour have got it all for you. Come, and begin with us. We'll
           together make it to success.<br />
-          The Registration will get close at 11:50pm today <br />
+          <span id="cptime"></span>  <br />
           Register Fast <br />
         </p>
       </div>
@@ -198,7 +198,7 @@
         <input type="submit" id="submitbtn" class="submit" />
       </div>
     </div>
-    <div class="pop_msg" id="pop">
+    <div class="pop_msg" id="pop" style="display: none;">
       <h3 id="msg">message</h3>
       <button id="bty" onclick="close()"> okay </button>
   </div>
@@ -227,6 +227,12 @@
       appId: "1:898809570236:web:9642afa56d6ec6e91741b9",
       measurementId: "G-56CPJNZ7Y6",
     };
+    var date2 = new Date("08/31/2023");
+    var date1 = new Date("08/24/2023");
+    var Difference = date2.getTime() - date1.getTime();
+    var dayscp = Difference / (1000 * 3600 * 24);
+     let cp2=document.getElementById("cptime");
+    cp2.innerHTML=`The Registration will end within ${dayscp} days;`
     let uid;
     let photo;
     let resume;
