@@ -198,6 +198,10 @@
         <input type="submit" id="submitbtn" class="submit" />
       </div>
     </div>
+    <div class="pop_msg" id="pop">
+      <h3 id="msg">message</h3>
+      <button id="bty" onclick="close()"> okay </button>
+  </div>
     
   </body>
   <script type="module">
@@ -226,6 +230,7 @@
     let uid;
     let photo;
     let resume;
+    let done=false;
     const fileInput1 = document.getElementById("getRes");
     fileInput1.onchange = () => {
 
@@ -240,6 +245,28 @@
       photo = selectedFile;
       document.getElementById("upbtn").innerHTML = "photo : " + photo.name;
     };
+    function disp(x){
+      document.getElementById("pop").style.display="block";
+      document.getElementById("msg").innerHTML= x;
+    }
+    function close(){
+      if(!done)
+      {
+        document.getElementById("pop").style.display=none;
+
+      }
+      else
+      {
+        window.location.href="./about.html";
+      }
+    }
+    bty.addEventListener('click', (e) => {
+            if (!done)
+                document.getElementById("pop").style.display = "none";
+            else
+                window.location.href = "./about.html";
+        });
+
     initializeApp(firebaseConfig);
     const root = getDatabase();
     const storage = getStorage();
@@ -249,7 +276,7 @@
     function upload() {
     const storageRef = ref(storage, uid + "photo");
     uploadBytes(storageRef, photo).then((snapshot) => {
-    alert("uploaded photo");
+    disp("uploaded photo");
     getDownloadURL(storageRef)
 
     .then((url) => {
@@ -267,7 +294,7 @@
     function upload1(x) {
       const storageRef = ref(storage, uid + "resume");
       uploadBytes(storageRef, resume).then((snapshot) => {
-        alert("Uploaded resume!");
+        disp("Uploaded resume!");
 
         getDownloadURL(storageRef)
                     .then((url) => {
@@ -313,7 +340,10 @@
         .then(() => {
           // Data saved successfully!
           console.log("done");
-          alert("DONE !  YOUR FORM HAS BEEN SUBMITTED");
+          done = true;
+         disp("DONE !  YOUR FORM HAS BEEN SUBMITTED");
+
+        //  window.location.href = "./index.html";
         })
         .catch((error) => {
           console.log(error);
@@ -337,19 +367,20 @@
       uid = _reg + " " + Date.now();
     
       if(username && mail && _contact && _reg && _prog && _year && _trade && _ten && _why)
-      {
-      if(el.checked){
-      upload();//step1
-    //   upload1();
-    //   writeUserData(username,mail,_contact,_reg,_ten,_twelve,_why,_prog,_year,_trade
-    //   );
-          }
+          if(photo){
+                  if(el.checked){
+                    disp("Please wait... uploading... ")
+                    upload();
+                      }
+                      else{
+                          disp("Please check the tick box");
+                      }
+                  }
           else{
-              alert("Please check the tick box");
+            disp("please upload photo")
           }
-      }
         else{
-        alert("Please fill the details")
+        disp("Please fill the details")
            }
     });
   </script>
