@@ -1184,6 +1184,11 @@ a{
         .activeTopNav {
             border-radius: 1px 1px 5px 5px;
         }
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+          }
         /*-- NAV TEXT --*/
 
 

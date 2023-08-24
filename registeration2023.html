@@ -144,19 +144,19 @@
           placeholder="Why should we select you*"
         ></textarea>
 
-        <select class="formEntry" id="prog">
+        <select class="formEntry extend" id="prog">
           <option value="">Tap to select programme*</option>
           <option value="B.E">B.E</option>
           <option value="ICD">ICD</option>
         </select>
-        <select class="formEntry" id="year">
+        <select class="formEntry extend" id="year">
           <option value="">Tap to select year*</option>
           <option value="First">First</option>
           <option value="Second">Second</option>
           <option value="Third">Third</option>
         </select>
 
-        <select class="formEntry" id="select1">
+        <select class="formEntry extend"  id="select1">
           <option value="">Tap to select branch*</option>
           <option value="Computer">Computer science</option>
           <option value="Mechanical">Mechanical</option>
@@ -172,7 +172,7 @@
 
         <button
           id="upbtn"
-          class="formEntry"
+          class="formEntry extend"
           onclick="document.getElementById('getFile').click()"
         >
           Tap to upload Photo*
@@ -181,7 +181,7 @@
 
         <button
           id="resbtn"
-          class="formEntry"
+          class="formEntry extend"
           onclick="document.getElementById('getRes').click()"
         >
           Tap to upload Resume(optional)
@@ -228,9 +228,10 @@
       measurementId: "G-56CPJNZ7Y6",
     };
     var date2 = new Date("08/31/2023");
-    var date1 = new Date("08/24/2023");
+    var date1 = new Date();
     var Difference = date2.getTime() - date1.getTime();
-    var dayscp = Difference / (1000 * 3600 * 24);
+    var dayscp = Math.floor((Difference / (1000 * 3600 * 24)));
+
      let cp2=document.getElementById("cptime");
     cp2.innerHTML=`The Registration will end within ${dayscp} days;`
     let uid;
@@ -243,7 +244,7 @@
       const selectedFile = fileInput1.files[0];
       resume = selectedFile;
       document.getElementById("resbtn").innerHTML = "File : " + resume.name;
-      alert("resume is working")
+      // alert("resume is working")
     };
     const fileInput = document.getElementById("getFile");
     fileInput.onchange = () => {
