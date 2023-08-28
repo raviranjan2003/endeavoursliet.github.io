@@ -32,7 +32,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
 
-    <link rel="stylesheet" href="/css/reg.css" />
+    <link rel="stylesheet" href="./css/reg copy.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <title>Endeavour | register</title>
    
@@ -227,13 +227,19 @@
       appId: "1:898809570236:web:9642afa56d6ec6e91741b9",
       measurementId: "G-56CPJNZ7Y6",
     };
-    var date2 = new Date("08/31/2023");
+    var date2 = new Date("09/01/2023");
     var date1 = new Date();
     var Difference = date2.getTime() - date1.getTime();
-    var dayscp = Math.floor((Difference / (1000 * 3600 * 24)));
+    var dayscp = ((Difference / (1000 * 3600 * 24)));
+    var cp5= Math.floor(dayscp);
+    var hourcp=Math.floor(((dayscp%cp5))*24);
+    var hourcp1=(((dayscp%cp5))*24);
+    var mincp2=Math.floor((hourcp1%hourcp)*60)
+    // var mincp= 
+    // alert(hourcp2);
 
      let cp2=document.getElementById("cptime");
-    cp2.innerHTML=`The Registration will end within ${dayscp} days;`
+    cp2.innerHTML=`The Registration will end within ${cp5} days ${hourcp} hour  and ${mincp2}mins ;`
     let uid;
     let photo;
     let resume;
