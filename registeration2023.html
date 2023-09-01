@@ -232,11 +232,12 @@
     var Difference = date2.getTime() - date1.getTime();
     var dayscp = ((Difference / (1000 * 3600 * 24)));
     var cp5= Math.floor(dayscp);
-    var hourcp=Math.floor(((dayscp%cp5))*24);
-    var hourcp1=(((dayscp%cp5))*24);
+    var hourcp=Math.floor(((dayscp))*24);
+    var hourcp1=((dayscp)*24);
     var mincp2=Math.floor((hourcp1%hourcp)*60)
     // var mincp= 
-    // alert(hourcp2);
+    // alert(dayscp);
+    alert(hourcp);
 
      let cp2=document.getElementById("cptime");
     cp2.innerHTML=`The Registration will end within ${cp5} days ${hourcp} hour  and ${mincp2}mins ;`
