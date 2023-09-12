@@ -1005,10 +1005,13 @@ a{
         /* NAV TEXT */
         .topNav {
             height: 50px;
+            /* display: none; */
         }
 
             .topNav .emptySpace25 {
-                width: 15%;
+                width: 5%;
+                /* display: none; */
+                
             }
 
             .topNav .navArray {

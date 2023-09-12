@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ContactForm</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,800&display=swap');
+/* 
+            .mainback {
+                width: 100vw;
+                height: 100vh;
+                background-color: black;
+                /*  
+            } */
+
+            .amain {
+                width: 100vw;
+                height: 100vh;
+                background-color: rgb(45, 42, 42);
+                       display: flex;
+                
+                z-index: 1;
+
+            }
+
+            .acontent {
+                width: 40vw;
+                height: 65vh;
+                background-color: rgb(255, 255, 255);
+                border-radius: 25px 25px 25px 25px;
+                justify-content: center;
+                align-items: center;
+                margin:5% 0 0 30% ;
+            }
+
+            .apageTitle {
+                /* position: relative; */
+                font-size: 2.7rem;
+                font-family: 'Poppins', sans-serif;
+                /* font-weight:1200; */
+                font-style: italic;
+                margin-left: 10vw;
+                color:rgb(177, 55, 7);
+                z-index: 1;
+            }
+
+            .asecondaryTitle {
+                font-size: 1.7rem;
+                ;
+                /* color:rgb(1, 49, 18); */
+                color: #000000;
+                margin-left: 5vw;
+                font-weight: bolder;
+                font-style: italic; 
+                font-family: 'Poppins', sans-serif;
+            }
+
+            .aformEntry {
+                display: block;
+                margin: 30px auto;
+                height: 6vh;
+                padding: 10px;
+                border-radius: 2px;
+                border: none;
+                transition: all 0.5s ease 0s;
+                border-radius: 20px;
+            }
+
+            .aname {
+                background-color: #ebebeb;
+                color: #090909;
+            
+                width: 20vw;
+                border: 5px solid rgb(177, 55, 7);
+           
+            }
+
+            .aname:hover {
+
+                width: 25vw;
+                transition: ease 0.5s;
+            
+            }
+
+            .aemail {
+                background-color: #ebebeb;
+                color: rgb(9, 9, 9);
+                width: 20vw;
+   
+                border: 5px solid rgb(177, 55, 7);;
+                ;
+                
+            }
+
+            .aemail:hover {
+               
+                width: 25vw;
+                transition: ease 0.5s;
+     
+            }
+
+            .asubmit {
+                position: relative;
+                width: 22vw;
+                height: 8vh;
+                color: white;
+                background-color: rgb(0, 0, 0);;
+                font-size: 20px;
+                position: absolute;
+                right: 260;
+                bottom: 80;
+                border: 5px solid #ffffff;
+                border-radius: 25px;
+                margin-left: 9vw;
+
+            }
+
+            .asubmit:hover {
+                background-color: rgb(131, 40, 3);
+             
+                
+            }
+            .awelcome{
+                margin-left: 35vw;
+                font-weight: bold;
+                font-size: 3rem;
+                color:balck
+            }
+            .admin{
+                font-weight: bolder;
+                font-size: 3rem;
+               color:
+                rgb(177, 55, 7);
+            }
+            @media only screen and (max-width:760px){
+                .amain {
+                width: 100vw;
+                height: 100vh;
+                background-color: rgb(45, 42, 42);
+                       display: flex;
+                
+                z-index: 1;
+
+            }
+
+            .acontent {
+                width: 95vw;
+                height: 65vh;
+                background-color: rgb(255, 255, 255);
+                border-radius: 25px 25px 25px 25px;
+                justify-content: center;
+                align-items: center;
+                margin-left:auto;
+                margin-right: auto;
+            }
+
+            .apageTitle {
+                /* position: relative; */
+                font-size: 1.7rem;
+                font-family: 'Poppins', sans-serif;
+                /* font-weight:1200; */
+                font-style: italic;
+                text-align: center;
+                margin-left:10vw;
+                color:rgb(177, 55, 7);
+                z-index: 1;
+            }
+
+            .asecondaryTitle {
+                font-size: 1rem;
+                ;
+                /* color:rgb(1, 49, 18); */
+                color: #000000;
+                margin-left: auto;
+                margin-right: auto;
+                font-weight: bolder;
+                font-style: italic; 
+                font-family: 'Poppins', sans-serif;
+                text-align: center;
+            }
+
+            .aformEntry {
+                display: block;
+                /* margin: 30px auto; */
+                width: 80vw;
+                height: 6vh;
+                padding: 10px;
+                border-radius: 2px;
+                border: none;
+                transition: all 0.5s ease 0s;
+                border-radius: 20px;
+                border: 5px solid rgb(177, 55, 7);
+                background-color: #ebebeb;
+                color: #090909;
+            }
+
+            .aname:hover {
+                
+                width: 80vw;
+/* width: 25vw;
+transition: ease 0.5s; */
+
+}.aemail:hover {
+                
+                width: 80vw;
+}
+
+            .asubmit {
+                position: relative;
+                width: 60vw;
+                height: 8vh;
+                color: white;
+                background-color: rgb(0, 0, 0);;
+                font-size: 20px;
+                position: absolute;
+                right: 260;
+                bottom: 80;
+                border: 5px solid #ffffff;
+                border-radius: 25px;
+                margin-left: 9vw;
+
+            }
+
+            /* .asubmit:hover {
+                background-color: rgb(131, 40, 3);
+             
+                
+            } */
+            .awelcome{
+                margin-left: 35vw;
+                font-weight: bold;
+                font-size: 1.5rem;
+                color:black;
+            }
+            .admin{
+                font-weight: bolder;
+                font-size: 1rem;
+               color:
+                rgb(177, 55, 7);
+            }
+            }
+        </style>
+          <link rel="stylesheet" href="../css/style.css">
+          <link rel="stylesheet" href="../css/front.css">
+    </head>
+
+    <body>
+        <!-- TOP NAVIGATION -->
+    <nav class="topNav" id="navSticky">
+        <div class="emptySpace25">
+            <div class="endeavourLogo"><a href="#"><img src="../images/mainlogo.png" alt="Endeavour-Logo" srcset=""></a></div>
+        </div>
+        <ul class="navArray">
+            <li class="navComponent flex-center"><a href="../index.html#home" class="flex-center">HOME</a></li>
+            <li class="navComponent flex-center"><a href="#" class="flex-center  activeTopNav">ABOUT US</a></li>
+            <li class="navComponent flex-center"><a href="../projects.html#UAVs" class="flex-center">DOMAINS</a></li>
+            <li class="navComponent flex-center"><a href="../index.html#sponsors" class="flex-center">SPONSORS</a></li>
+            <li class="navComponent flex-center"><a href="../teams.html#alumni" class="flex-center">TEAM</a></li>
+            <li class="navComponent flex-center"><a href="../login/login.html" class="flex-center">LOGIN</a></li>
+        </ul>
+        <div class="emptySpace25">
+            <div class="endeavourLogo"><a href="http://sliet.ac.in/" target="_blank" rel="noopener noreferrer"><img src="../images/SLIET_in_Colours_of_ENDEAVOUR.png" alt="Endeavour-Logo" srcset=""></a></div>
+        </div>
+    </nav>
+    
+        <div class="awelcome">
+            WELCOME <span class="admin">ADMIN </span>
+        </div>
+
+        <div class="amain">
+            <div class="acontent">
+                <form action="#" name="myform">
+                    <div class="apageTitle ">ENDEAVOUR</div>
+                    <div class="asecondaryTitle ">
+                        STRIVE TO CREATE DIFFERENCE</div>
+                    <input type="text" name="fname" class="aname aformEntry" id="name" placeholder="Name" />
+                    <input type="text" name="femail" class="aemail aformEntry" id="email" placeholder="Email" />
+                    <input type="text" name="fbsname" class="aemail aformEntry" id="wow" placeholder="Words of Wisdom" maxlength="50"/> 
+                    <input class="asubmit" type="submit" id='submit' />
+                </form>
+            </div>
+
+        </div>
+    </body>
+  
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js'
+        import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-database.js"
+
+        const firebaseConfig = {
+    apiKey: "AIzaSyB1Ha5LYqm2j5mfbLWUNuWOeZ2Vp9aT50I",
+    authDomain: "endeavouradminpanel.firebaseapp.com",
+    databaseURL: "https://endeavouradminpanel-default-rtdb.firebaseio.com",
+    projectId: "endeavouradminpanel",
+    storageBucket: "endeavouradminpanel.appspot.com",
+    messagingSenderId: "1059223226055",
+    appId: "1:1059223226055:web:b5493b3554d9d03e2d20e2",
+    measurementId: "G-0JFS3KJQQB"
+  };
+        //INTIALISE DATABASE
+        initializeApp(firebaseConfig);
+        const root = getDatabase();
+        let id ;
+        //WRITE OR TAKE VALUE IN DATABASE
+        function writeUserData(n,e,w) {
+            // set(ref(root,'user/' + userId),{
+            set(ref(root, 'users/' + id), {
+                name: n,
+                email: e,
+                wow: w
+
+            })
+                .then(() => {
+                    // Data saved successfully!
+                    // alert("done")
+                      alert("DONE !  YOUR RESPONSE HAS BEEN SUBMITTED");
+                    window.location.href = 'wisdom.html';
+                })
+                .catch((error) => {
+                    console.log(error);
+                    alert("error ")
+                });
+        }
+
+        //TO SAVE THE DATA AFTER CLICKING ON SIGN UP BUTTON 
+        submit.addEventListener('click', (e) => {
+            // e.preventdefault();
+            e.preventDefault()
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var wow = document.getElementById('wow').value;
+            id=`${name}`;
+            writeUserData(name, email,wow);
+        })
+    </script>
+
+    </html>
+
+</html>
+</body>
+</body>
+
+</html>
