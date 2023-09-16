@@ -232,7 +232,11 @@
             })
             .catch((error) => {
                 // Handle Firestore error
-                console.error(error);
+                // console.log(error.message);
+                document.getElementById('err_message').innerHTML = "Email or Password not matched !";
+                setTimeout(() => {
+                    document.getElementById('err_message').innerHTML = '';
+                },3000)
             });
 
         // Signed in 
