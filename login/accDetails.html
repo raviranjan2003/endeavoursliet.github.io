@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Details</title>
+    <style>
+        .button {
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Account Details</h1>
+    <div class="container">
+        <button class="button" id="logOut">Log Out</button>
+    </div>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+        import { getAuth, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyB1Ha5LYqm2j5mfbLWUNuWOeZ2Vp9aT50I",
+            authDomain: "endeavouradminpanel.firebaseapp.com",
+            databaseURL: "https://endeavouradminpanel-default-rtdb.firebaseio.com",
+            projectId: "endeavouradminpanel",
+            storageBucket: "endeavouradminpanel.appspot.com",
+            messagingSenderId: "1059223226055",
+            appId: "1:1059223226055:web:b5493b3554d9d03e2d20e2",
+            measurementId: "G-0JFS3KJQQB"
+        };
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+
+        // Get a reference to Firebase Authentication
+        const auth = getAuth(app);
+
+        // Sign out the currently logged-in user
+       document.getElementById("logOut").addEventListener("click",function (){
+        signOut(auth)
+            .then(() => {
+                console.log("User signed out successfully.");
+                window.location.href = "adminLogin.html";
+            })
+            .catch((error) => {
+                console.error("Error signing out:", error);
+            });
+       })
+       onAuthStateChanged(auth, (user) => {
+        if(user.uid === "wxDTi6VBiUMZb6u8H6zMX5cXuz12"){
+            console.log("Ravi Ranjan")
+            console.log(user.uid);
+            // wxDTi6VBiUMZb6u8H6zMX5cXuz12
+        }else{
+            console.log("User Not exist");
+            window.location.href = "adminLogin.html";
+        }
+       })
+    </script>
+</body>
+
+</html>
