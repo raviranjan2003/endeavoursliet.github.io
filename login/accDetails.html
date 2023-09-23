@@ -9,18 +9,80 @@
         .button {
             float: right;
         }
+        .data {
+            /* border: 2px solid black; */
+            width: 739px;
+            height: auto;
+        }
+        table {
+            background-color: rgb(255, 255, 255);
+            text-align: center;
+            width: 739px;
+        }
+        table,
+        th,
+        td {
+            padding: 10px;
+        }
+        /* th{
+            color: #A00000;
+        } */
+        .row-hover:hover {
+            background-color: #A00000;
+            color: white;
+        }
     </style>
 </head>
 
 <body>
-    <h1>Account Details</h1>
     <div class="container">
         <button class="button" id="logOut">Log Out</button>
+        <h1>Account Details</h1>
+        <h3 class="total-fund" id="total-fund">
+        </h3>
+        <div class="data">
+            <table>
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Paid To </th>
+                  <th>Amount</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody id="detailsTable">
+              </tbody><br>
+              <form action="" >
+                <tr>
+                    <th>
+                        <label for="date">Date :</label><br>
+                        <input type="date" id="date" name="date" class="form-data"><br>
+                    </th>
+                    <th>
+                        <label for="name">Paid to : </label><br>
+                        <input type="text" id="name" name="name" class="form-data"><br>
+                    </th>
+                    <th>
+                        <label for="amount">Amount :</label><br>
+                        <input type="text" id="amount" name="amount" class="form-data"><br>
+                    </th>
+                    <th>
+                        <label for="description">Description :</label><br>
+                        <textarea name="description" id="description" cols="30" rows="3" class="form-data"></textarea><br><br>
+                    </th>
+                    <th>
+                        <button type="button" id="submit">Submit</button>
+                    </th>
+                </tr>
+            </form> 
+            </table>
+          </div>
+        
     </div>
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
         import { getAuth, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
-
+        import { getFirestore, collection, addDoc, doc, getDocs, getDoc,updateDoc, serverTimestamp,query, orderBy } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js";
         // Your web app's Firebase configuration
         // For Firebase JS SDK v7.20.0 and later, measurementId is optional
         const firebaseConfig = {
@@ -39,6 +101,9 @@
         // Get a reference to Firebase Authentication
         const auth = getAuth(app);
 
+        //Initialize Cloud Firestore
+        const db = getFirestore(app);
+
         // Sign out the currently logged-in user
        document.getElementById("logOut").addEventListener("click",function (){
         signOut(auth)
@@ -50,16 +115,100 @@
                 console.error("Error signing out:", error);
             });
        })
-       onAuthStateChanged(auth, (user) => {
-        if(user.uid === "wxDTi6VBiUMZb6u8H6zMX5cXuz12"){
-            console.log("Ravi Ranjan")
-            console.log(user.uid);
+       onAuthStateChanged(auth, async (user) => {
+        if( user ){
+            // console.log("Ravi Ranjan")
+            // console.log(user.uid);
             // wxDTi6VBiUMZb6u8H6zMX5cXuz12
+            if(user.uid === "wxDTi6VBiUMZb6u8H6zMX5cXuz12"){
+                // console.log("Welcome Admin");
+                let details = [];
+
+                //Get data from collection accounts
+                getDoc(doc(db,"funds","vzzdXpVk9mfHFFr5Fwux"))
+                .then((doc)=>{
+                    const updatedFund = doc.data().totalFunds;
+                    document.getElementById("total-fund").innerHTML = `Available Funds : ₹${updatedFund}`;
+                })
+                .catch((err)=>{
+                    console.log(err);
+                })
+
+                //Get data from collection accounts
+                getDocs(query(collection(db, "accounts"),orderBy("createdAt", "desc")))
+                    .then((snapshot)=>{
+                        
+                        snapshot.docs.forEach((doc)=>{
+                            details.push({ ...doc.data() });
+                        })
+                        const table = document.getElementById("detailsTable");
+                        let row = `<tr></tr>`;
+                        table.innerHTML = row;
+                        details.forEach((doc)=>{
+                            row = `<tr class="row-hover">
+                                <td>${doc.date}</td>
+                                <td>${doc.name}</td>
+                                <td>${doc.amount}</td>
+                                <td>${doc.description}</td>
+                                </tr>`;
+                            table.innerHTML += row;
+                        })
+                    })
+                    .catch((error)=>{
+                        console.log(error.message);
+                    })
+                 
+            }else{
+                window.location.href = "adminLogin.html";
+            }
         }else{
             console.log("User Not exist");
             window.location.href = "adminLogin.html";
         }
        })
+
+       document.getElementById("submit").addEventListener("click", async function (){
+        const formData = document.querySelectorAll(".form-data");
+        const date = formData[0].value;
+        const name = formData[1].value;
+        const amount = formData[2].value;
+        const description = formData[3].value; 
+        const timeStamp = serverTimestamp();
+
+        const docc = await addDoc(collection(db,"accounts"),{
+            date,
+            name,
+            amount,
+            description,
+            createdAt : timeStamp
+        })
+
+        alert(" Added with document id : " , docc.id);
+        const docRef = doc(db,"funds","vzzdXpVk9mfHFFr5Fwux");
+        console.log(docRef);
+
+        //Get data from collection funds
+        getDoc(docRef)
+        .then((doc)=>{
+            // console.log(doc.data().totalFunds);
+            const funds = doc.data().totalFunds;
+            const newFund = funds - parseInt(amount);
+            updateDoc(docRef,
+            { totalFunds : newFund })
+            .then(()=>{
+                console.log("Updated");
+                location.reload();
+            })
+            .catch((err)=>{
+                console.log(err);
+            })
+        })
+        .catch((err)=>{
+            console.log(err);
+        })
+       })
+       
+
     </script>
 </body>
 
