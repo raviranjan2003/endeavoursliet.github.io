@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account Details</title>
     <style>
+        .container{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
         .button {
             float: right;
         }
@@ -31,6 +36,20 @@
             background-color: #A00000;
             color: white;
         }
+        footer{
+            position : fixed;
+            bottom : 0;
+            width: 100vw;
+            height: auto;
+            text-align: center;
+            background-color: #a40505;
+            color: white;
+            font-weight: bolder;
+            font-size: x-large;
+        }
+        h3{
+            color :#A00000
+        }
     </style>
 </head>
 
@@ -52,7 +71,7 @@
               </thead>
               <tbody id="detailsTable">
               </tbody><br>
-              <form action="" >
+              <form action="" class="form" >
                 <tr>
                     <th>
                         <label for="date">Date :</label><br>
@@ -76,9 +95,9 @@
                 </tr>
             </form> 
             </table>
-          </div>
-        
+        </div> 
     </div>
+    <footer>Made with &#129293; by Ravi Ranjan</footer>
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
         import { getAuth, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
@@ -148,7 +167,7 @@
                             row = `<tr class="row-hover">
                                 <td>${doc.date}</td>
                                 <td>${doc.name}</td>
-                                <td>${doc.amount}</td>
+                                <td>₹${doc.amount}</td>
                                 <td>${doc.description}</td>
                                 </tr>`;
                             table.innerHTML += row;
